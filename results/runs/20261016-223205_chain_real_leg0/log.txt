@@ -1,0 +1,31 @@
+$ /root/miniconda3/bin/python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --old sentence-transformers/all-MiniLM-L6-v2 --new BAAI/bge-small-en-v1.5 --cache-dir cache/ --dump-queries dump/leg0 --out /root/thaw-r18/results/runs/20261016-223205_chain_real_leg0/migration.json
+corpus=beir  N=500000  D=5000
+old model: sentence-transformers/all-MiniLM-L6-v2
+prefixes  old: query='' passage=''   new: query='Represent this sentence for searching relevant passages: ' passage=''
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3436.70it/s]
+  corpus embeddings from cache 2aa13438bd13a33c3e6705a785ecfcc2.npy
+new model: BAAI/bge-small-en-v1.5
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3183.15it/s]
+  corpus embeddings from cache 8256b4ed43559037dee7d45f28746869.npy
+dumped query vectors to dump/leg0: q_old (5000, 384) float32, q_new (5000, 384) float32
+load x = D*K'/N at K'=500: 5   (none in the informative range 0.05-3)
+
+     K  recall@K   sav%@D=5000
+------------------------------
+    10     0.524          90.9
+    20     0.664          83.2
+    50     0.790          65.0
+   100     0.855          45.2
+   200     0.902          24.4
+   500     0.946           6.3
+  1000     0.966           1.5
+  2000     0.979           0.3
+
+full recomputation would embed 500,000 units
+wrote /root/thaw-r18/results/runs/20261016-223205_chain_real_leg0/migration.json (77,943 bytes, sha256 c2b81699f1b4)
+
+[exit 0 after 107 s]

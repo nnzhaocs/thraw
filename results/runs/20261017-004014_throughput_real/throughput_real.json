@@ -1,0 +1,186 @@
+{
+  "model": "BAAI/bge-base-en-v1.5",
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "passage_source": "pool.jsonl: 2048 sampled, 5-214 words, median 49",
+  "synthetic": false,
+  "passage_curve": {
+    "1": {
+      "total_ms": 8.61,
+      "ms_per_item": 8.6142,
+      "items_per_s": 116.1,
+      "padding_factor": 1.0,
+      "tokens_per_item": 69.0
+    },
+    "2": {
+      "total_ms": 10.14,
+      "ms_per_item": 5.0701,
+      "items_per_s": 197.2,
+      "padding_factor": 1.0805,
+      "tokens_per_item": 60.9
+    },
+    "4": {
+      "total_ms": 20.15,
+      "ms_per_item": 5.0384,
+      "items_per_s": 198.5,
+      "padding_factor": 1.6492,
+      "tokens_per_item": 76.4
+    },
+    "8": {
+      "total_ms": 32.41,
+      "ms_per_item": 4.0507,
+      "items_per_s": 246.9,
+      "padding_factor": 1.5675,
+      "tokens_per_item": 73.9
+    },
+    "16": {
+      "total_ms": 65.82,
+      "ms_per_item": 4.114,
+      "items_per_s": 243.1,
+      "padding_factor": 1.7743,
+      "tokens_per_item": 70.9
+    },
+    "32": {
+      "total_ms": 145.02,
+      "ms_per_item": 4.5318,
+      "items_per_s": 220.7,
+      "padding_factor": 1.8582,
+      "tokens_per_item": 71.1
+    },
+    "64": {
+      "total_ms": 358.97,
+      "ms_per_item": 5.6089,
+      "items_per_s": 178.3,
+      "padding_factor": 2.3779,
+      "tokens_per_item": 73.8
+    },
+    "128": {
+      "total_ms": 796.1,
+      "ms_per_item": 6.2195,
+      "items_per_s": 160.8,
+      "padding_factor": 2.4067,
+      "tokens_per_item": 72.7
+    },
+    "256": {
+      "total_ms": 3727.25,
+      "ms_per_item": 14.5596,
+      "items_per_s": 68.7,
+      "padding_factor": 3.0544,
+      "tokens_per_item": 72.8
+    },
+    "512": {
+      "total_ms": 19738.93,
+      "ms_per_item": 38.5526,
+      "items_per_s": 25.9,
+      "padding_factor": 3.2764,
+      "tokens_per_item": 73.5
+    }
+  },
+  "query_curve": {
+    "1": {
+      "total_ms": 4.99,
+      "ms_per_item": 4.9946,
+      "items_per_s": 200.2,
+      "padding_factor": 1.0,
+      "tokens_per_item": 8.8
+    },
+    "32": {
+      "total_ms": 6.63,
+      "ms_per_item": 0.2071,
+      "items_per_s": 4829.7,
+      "padding_factor": 1.8865,
+      "tokens_per_item": 8.6
+    },
+    "512": {
+      "total_ms": 80.99,
+      "ms_per_item": 0.1582,
+      "items_per_s": 6321.8,
+      "padding_factor": 2.4236,
+      "tokens_per_item": 9.1
+    }
+  },
+  "saturation_batch": 8,
+  "best_batch": 8,
+  "unit_ms": 4.0507,
+  "worst_large_batch": 512,
+  "worst_large_batch_ms": 38.5526,
+  "curve_rises_past_best": true,
+  "query_ms": 4.9946,
+  "query_ms_batched": 0.1582,
+  "repair_chunk": 8,
+  "repair_profile": {
+    "method": "chunked",
+    "chunk": 8,
+    "weighted_batch": 213.09995078567653,
+    "penalty": 1.0068587774021256,
+    "work_below_chunk": 0.03433161073407633,
+    "interpolated_sizes": [
+      3,
+      5,
+      7
+    ],
+    "penalty_by_chunk": {
+      "1": 2.1256,
+      "2": 1.2621,
+      "4": 1.2452,
+      "8": 1.0069,
+      "16": 1.0186,
+      "32": 1.1064,
+      "64": 1.323,
+      "128": 1.4334,
+      "256": 2.4086,
+      "512": 3.8617
+    }
+  },
+  "repair_profile_alternative": {
+    "weighted_batch": 213.09995078567653,
+    "penalty": 1.0987075875787662,
+    "work_below_32": 0.09310545213041942,
+    "saturation_batch": 8,
+    "method": "parametric"
+  },
+  "penalty_method": "chunked",
+  "penalty": 1.0068587774021256,
+  "repair_unit_ms": 4.07848284962279,
+  "breakeven_reached": 0.9931879449669968,
+  "estimate_file": "results/estimate_msmarco.json",
+  "kprime": 500,
+  "estimate_N": 500000,
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "analysis/measure_throughput.py",
+      "--model",
+      "BAAI/bge-base-en-v1.5",
+      "--old-model",
+      "sentence-transformers/all-MiniLM-L6-v2",
+      "--passage-file",
+      "pool.jsonl",
+      "--query-file",
+      "beir/msmarco/queries.jsonl",
+      "--estimate",
+      "results/estimate_msmarco.json",
+      "--kprime",
+      "500",
+      "--pool",
+      "2048",
+      "--batches",
+      "1,2,4,8,16,32,64,128,256,512",
+      "--out",
+      "D:\\SemView\\thaw-r18\\results\\runs\\20261017-004014_throughput_real/throughput_real.json"
+    ],
+    "dtype": "float32",
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

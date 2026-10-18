@@ -1,0 +1,17 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/operator_safety.py --old _local/opsafe_sample/bge_3k.npy --new _local/opsafe_sample/bge_3k_f16.npy --queries 500 --k 10 --label bge-base f32 vs f16 (3k sample) --out D:\SemView\thaw-r18\results\runs\20261016-220457_opsafe_fp16/operator_safety.json
+
+  bge-base f32 vs f16 (3k sample)   dims 768 -> 768   N=2,500  B=0.000127
+    rho    mixed-index recall    threshold selected (vs true)
+    0.10   0.9998                    5.0 vs   5.0  (0.0%)
+    0.25   0.9998                    5.0 vs   5.0  (0.0%)
+    0.50   1.0000                    5.0 vs   5.0  (0.0%)
+    0.75   1.0000                    5.0 vs   5.0  (0.0%)
+    0.90   1.0000                    5.0 vs   5.0  (0.0%)
+    -> the mixed index is SAFE for this pair: C1's prohibition does not hold
+       unconditionally, it holds for large B.
+    (control) window-then-rerank returns the new model's own top-k at any rho, by construction: every comparison happens in the new space. Not scored, because a measurement of an identity is not evidence.
+wrote D:\SemView\thaw-r18\results\runs\20261016-220457_opsafe_fp16\operator_safety.json (2,675 bytes, sha256 ccc1397e521c)
+
+wrote D:\SemView\thaw-r18\results\runs\20261016-220457_opsafe_fp16/operator_safety.json
+
+[exit 0 after 11 s]

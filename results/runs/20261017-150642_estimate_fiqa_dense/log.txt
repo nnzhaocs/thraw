@@ -1,0 +1,10 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus beir --beir-name fiqa --path D:/SemView/semview_v14/beir --qrels-split dev --old sentence-transformers/all-MiniLM-L6-v2 --kprimes 500 --cache-dir cache/ --out D:\SemView\thaw-1017\results\runs\20261017-150642_estimate_fiqa_dense/estimate.json
+corpus=beir  N=57638  D=500  old=sentence-transformers/all-MiniLM-L6-v2
+NOTE: no new-model forward passes are performed by this tool.
+prefixes  old: query='' passage=''
+  encoded 57,638 / 57,638
+  K'=500   observed reached=0.726 (savings 27.4%)  asymptote=0.838 (power_sat, rmse=0.0035)
+           stable after 500 intents (100% of log); accurate: within 0.02 after 222 intents (44% of log)
+wrote D:\SemView\thaw-1017\results\runs\20261017-150642_estimate_fiqa_dense\estimate.json (2,645 bytes, sha256 3fdf9c730572)
+
+[exit 0 after 100 s]

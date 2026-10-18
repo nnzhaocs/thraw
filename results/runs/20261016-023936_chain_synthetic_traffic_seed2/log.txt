@@ -1,0 +1,31 @@
+$ python analysis/chain.py --synthetic --legs 4 --eval-queries 150 --queries-per-leg 150 --kprimes 500 --seed 2 --out /home/claude/chain_review/thaw/results/runs/20261016-023936_chain_synthetic_traffic_seed2/chain.json
+
+  N=200,000  4 legs  k=10  150 queries per leg  150 evaluation queries (load x=0.375)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  31.3%  31.3%  31.3%  31.4%   cumulative encode  125.3% of N
+    union-nearest    reached  31.3%  44.7%  46.2%  46.9%   cumulative encode  169.2% of N
+    union-all        reached  31.3%  44.7%  53.6%  60.6%   cumulative encode  190.3% of N
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.849       0.695       0.559       0.475
+  previous-only              -       0.321       0.456       0.469
+  union-nearest              -       0.785       0.761       0.721
+  union-all                  -       0.785       0.794       0.815
+  passes, % of N          0.0%       44.7%       54.1%       61.0%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain (cumulative encode = forward passes over all 4 legs)
+  policy              K‘  cum.encode   % of N  eval passes   recall
+  ------------------------------------------------------------------
+  original-only      500     250,677   125.3%       62,677    0.475
+  previous-only      500     338,311   169.2%       49,819    0.469
+  union-nearest      500     338,311   169.2%       94,061    0.721
+  union-all          500     380,550   190.3%      121,932    0.815
+
+  No union policy beat an original-only row that spent at least as much; the literal design's best here is 0.475.
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023936_chain_synthetic_traffic_seed2/chain.json (12,817 bytes, sha256 97cfd79b8ae1)
+
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023936_chain_synthetic_traffic_seed2/chain.json
+
+[exit 0 after 30 s]

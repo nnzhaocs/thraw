@@ -1,0 +1,35 @@
+$ /root/miniconda3/bin/python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --old BAAI/bge-base-en-v1.5 --new BAAI/bge-m3 --cache-dir cache/ --dump-queries dump/leg2 --out /root/thaw-r18/results/runs/20261016-224346_chain_real_leg2/migration.json
+corpus=beir  N=500000  D=5000
+old model: BAAI/bge-base-en-v1.5
+prefixes  old: query='Represent this sentence for searching relevant passages: ' passage=''   new: query='' passage=''
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8375.81it/s]
+  corpus embeddings from cache 5d103cb11869f81b2b5023901a9fc385.npy
+new model: BAAI/bge-m3
+
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 391/391 [00:00<00:00, 45293.11it/s]
+  encoded 100,000 / 500,000
+  encoded 200,000 / 500,000
+  encoded 300,000 / 500,000
+  encoded 400,000 / 500,000
+  encoded 500,000 / 500,000
+dumped query vectors to dump/leg2: q_old (5000, 768) float32, q_new (5000, 1024) float32
+load x = D*K'/N at K'=500: 5   (none in the informative range 0.05-3)
+
+     K  recall@K   sav%@D=5000
+------------------------------
+    10     0.431          90.9
+    20     0.550          83.2
+    50     0.671          65.4
+   100     0.743          46.2
+   200     0.801          26.1
+   500     0.860           7.9
+  1000     0.896           2.3
+  2000     0.926           0.5
+
+full recomputation would embed 500,000 units
+wrote /root/thaw-r18/results/runs/20261016-224346_chain_real_leg2/migration.json (77,880 bytes, sha256 430cfcbe2bc4)
+
+[exit 0 after 1487 s]

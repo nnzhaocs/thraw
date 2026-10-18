@@ -1,0 +1,73 @@
+{
+  "tool": "margin_cert",
+  "inputs": {
+    "old": "_local/opsafe_sample/bge_3k.npy",
+    "new": "_local/opsafe_sample/bge_3k_f16.npy"
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "analysis/margin_cert.py",
+      "--old",
+      "_local/opsafe_sample/bge_3k.npy",
+      "--new",
+      "_local/opsafe_sample/bge_3k_f16.npy",
+      "--new-f16",
+      "--queries",
+      "500",
+      "--k",
+      "10",
+      "--label",
+      "bge-base f32 vs f16 certificate",
+      "--out",
+      "D:\\SemView\\thaw-r18\\results\\runs\\20261016-220636_margin_cert_f16/margin_cert.json"
+    ],
+    "dtype": "float16",
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  },
+  "report": {
+    "queries": 500,
+    "corpus": 2500,
+    "k": 10,
+    "calibration_queries": 250,
+    "test_queries": 250,
+    "split": true,
+    "score_perturbation_max": 6.348225871305457e-05,
+    "score_perturbation_max_test": 5.753558628346367e-05,
+    "premise_exceeded": 0,
+    "premise_exceeded_frac": 0.0,
+    "soundness_can_fail": true,
+    "score_perturbation_mean": 9.501188937423643e-06,
+    "band": 0.00012696451742610915,
+    "kprime_derived": 11,
+    "kprime_mean": 10.044,
+    "kprime_p99": 11.0,
+    "flagged_frac_mean": 0.0040176000000000005,
+    "certified_frac_mean": 0.9959824,
+    "union_flagged": 1311,
+    "union_frac": 0.5244,
+    "topk_moved_queries": 0,
+    "soundness_violations": 0,
+    "load_x": 1.1,
+    "load_note": "union_frac is only interpretable at load x below about 3; above it every policy reaches the whole corpus and the union saturates regardless of the band. The transferable quantity is kprime_derived, which the existing cost model turns into savings at any N.",
+    "label": "bge-base f32 vs f16 certificate",
+    "quantization_pair": true,
+    "dims": [
+      768,
+      768
+    ],
+    "vector_eps_defined": true,
+    "vector_eps_max": 0.00024071232521626326,
+    "vector_eps_mean": 0.0002064736198544165
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "tool": "operator_safety",
+  "inputs": {
+    "old": "_local/opsafe_sample/bge_3k.npy",
+    "new": "_local/opsafe_sample/bge_3k_f16.npy"
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "analysis/operator_safety.py",
+      "--old",
+      "_local/opsafe_sample/bge_3k.npy",
+      "--new",
+      "_local/opsafe_sample/bge_3k_f16.npy",
+      "--queries",
+      "500",
+      "--k",
+      "10",
+      "--label",
+      "bge-base f32 vs f16 (3k sample)",
+      "--out",
+      "D:\\SemView\\thaw-r18\\results\\runs\\20261016-220457_opsafe_fp16/operator_safety.json"
+    ],
+    "dtype": "float16",
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  },
+  "report": {
+    "queries": 500,
+    "corpus": 2500,
+    "k": 10,
+    "score_perturbation_band": 0.00012696451742610915,
+    "threshold_percentile": 99.8,
+    "threshold_value": 0.620726094097055,
+    "rows": [
+      {
+        "rho": 0.1,
+        "repaired": 242,
+        "mixed_index_recall_at_k": 0.9997999999999999,
+        "threshold_selected_mixed": 5.0,
+        "threshold_selected_true": 5.0,
+        "threshold_rel_error": 0.0
+      },
+      {
+        "rho": 0.25,
+        "repaired": 605,
+        "mixed_index_recall_at_k": 0.9997999999999999,
+        "threshold_selected_mixed": 5.0,
+        "threshold_selected_true": 5.0,
+        "threshold_rel_error": 0.0
+      },
+      {
+        "rho": 0.5,
+        "repaired": 1249,
+        "mixed_index_recall_at_k": 1.0,
+        "threshold_selected_mixed": 5.0,
+        "threshold_selected_true": 5.0,
+        "threshold_rel_error": 0.0
+      },
+      {
+        "rho": 0.75,
+        "repaired": 1857,
+        "mixed_index_recall_at_k": 1.0,
+        "threshold_selected_mixed": 5.0,
+        "threshold_selected_true": 5.0,
+        "threshold_rel_error": 0.0
+      },
+      {
+        "rho": 0.9,
+        "repaired": 2257,
+        "mixed_index_recall_at_k": 1.0,
+        "threshold_selected_mixed": 5.0,
+        "threshold_selected_true": 5.0,
+        "threshold_rel_error": 0.0
+      }
+    ],
+    "control": "window-then-rerank returns the new model's own top-k at any rho, by construction: every comparison happens in the new space. Not scored, because a measurement of an identity is not evidence.",
+    "label": "bge-base f32 vs f16 (3k sample)",
+    "dims": [
+      768,
+      768
+    ]
+  }
+}

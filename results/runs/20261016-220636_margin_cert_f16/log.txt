@@ -1,0 +1,18 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/margin_cert.py --old _local/opsafe_sample/bge_3k.npy --new _local/opsafe_sample/bge_3k_f16.npy --new-f16 --queries 500 --k 10 --label bge-base f32 vs f16 certificate --out D:\SemView\thaw-r18\results\runs\20261016-220636_margin_cert_f16/margin_cert.json
+
+  bge-base f32 vs f16 certificate   dims 768 -> 768   N=2,500  500 queries  k=10
+    max score perturbation      0.000063
+    certificate band            0.000127
+    K' DERIVED (guaranteed)     11   (mean 10.0, p99 11)
+    certified per query         99.60% of corpus
+    top-10 genuinely moved      0/250 test queries
+    B fitted on                 250 queries, tested on 250
+    premise exceeded on test    0 pairs (0.000%)  max |ds| there 0.000058
+    soundness violations        0
+    -> nothing moved, so the certificate had nothing to catch: tight but
+       uninformative on this pair.
+wrote D:\SemView\thaw-r18\results\runs\20261016-220636_margin_cert_f16\margin_cert.json (2,278 bytes, sha256 21a389edcd05)
+
+wrote D:\SemView\thaw-r18\results\runs\20261016-220636_margin_cert_f16/margin_cert.json
+
+[exit 0 after 11 s]

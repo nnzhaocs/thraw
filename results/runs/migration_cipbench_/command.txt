@@ -1,0 +1,1 @@
+python -m semview.migration --corpus cipbench --path <cipbench-root> --old lexical:word --new lexical:char --out migration_cipbench.json

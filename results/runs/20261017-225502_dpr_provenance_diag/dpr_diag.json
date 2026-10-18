@@ -1,0 +1,132 @@
+{
+  "tool": "dpr_provenance_diag",
+  "variant": "psgs_w100.nq.no_index",
+  "dpr_path": "D:/SemView/semview_v14/wiki_dpr_clean",
+  "n": 256,
+  "expected_encoder": "facebook/dpr-ctx_encoder-single-nq-base",
+  "rows": [
+    {
+      "case": "max_length=128",
+      "mean_cos": 0.9466,
+      "min_cos": 0.7893,
+      "p05_cos": 0.8742,
+      "frac_above_0.99": 0.0,
+      "spread_mean_minus_p05": 0.0725,
+      "tokens_at_or_over_limit": 215,
+      "note": "0 truncated means max_length cannot be the cause"
+    },
+    {
+      "case": "max_length=256",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739,
+      "tokens_at_or_over_limit": 0,
+      "note": "0 truncated means max_length cannot be the cause"
+    },
+    {
+      "case": "max_length=350",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739,
+      "tokens_at_or_over_limit": 0,
+      "note": "0 truncated means max_length cannot be the cause"
+    },
+    {
+      "case": "max_length=512",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739,
+      "tokens_at_or_over_limit": 0,
+      "note": "0 truncated means max_length cannot be the cause"
+    },
+    {
+      "case": "text only, no title",
+      "mean_cos": 0.907,
+      "min_cos": 0.6421,
+      "p05_cos": 0.7812,
+      "frac_above_0.99": 0.0195,
+      "spread_mean_minus_p05": 0.1257
+    },
+    {
+      "case": "title+text joined",
+      "mean_cos": 0.9851,
+      "min_cos": 0.9212,
+      "p05_cos": 0.9699,
+      "frac_above_0.99": 0.3281,
+      "spread_mean_minus_p05": 0.0153
+    },
+    {
+      "case": "encoder=dpr-ctx_encoder-single-nq-base",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739,
+      "is_expected_for_variant": true
+    },
+    {
+      "case": "encoder=dpr-ctx_encoder-multiset-base",
+      "skipped": "TypeError: stat: path should be string, bytes, os.PathLike or integer, not NoneType",
+      "is_expected_for_variant": false
+    },
+    {
+      "case": "CLS of last hidden state",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739
+    },
+    {
+      "case": "norms and dtype",
+      "shipped_norm_mean": 12.2244,
+      "reencoded_norm_mean": 12.3546,
+      "shipped_dtype": "float32",
+      "f16_roundtrip_mean_cos": 1.0,
+      "note": "if the f16 round-trip cosine is ~1.0 then storage precision cannot explain a 0.95; a norm ratio far from 1 is a scale difference a cosine would otherwise hide"
+    },
+    {
+      "case": "one passage per batch",
+      "mean_cos": 0.9499,
+      "min_cos": 0.7895,
+      "p05_cos": 0.876,
+      "frac_above_0.99": 0.0039,
+      "spread_mean_minus_p05": 0.0739,
+      "vs_batched_mean_cos": 1.0,
+      "note": "vs_batched below ~0.999 means padding leaks and every row above is unreliable"
+    }
+  ],
+  "verdict": "CAUSE FOUND: 'title+text joined' reaches 0.9851. Fix that in verify_dpr_provenance and re-run the four DPR jobs.",
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "analysis/dpr_provenance_diag.py",
+      "--dpr-path",
+      "D:/SemView/semview_v14/wiki_dpr_clean",
+      "--variant",
+      "psgs_w100.nq.no_index",
+      "--n",
+      "256",
+      "--out",
+      "D:\\SemView\\thaw-1017\\results\\runs\\20261017-225502_dpr_provenance_diag/dpr_diag.json"
+    ],
+    "dtype": null,
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

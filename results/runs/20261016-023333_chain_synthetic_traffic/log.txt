@@ -1,0 +1,31 @@
+$ python analysis/chain.py --synthetic --legs 4 --eval-queries 150 --queries-per-leg 150 --kprimes 500 --out /home/claude/chain_review/thaw/results/runs/20261016-023333_chain_synthetic_traffic/chain.json
+
+  N=200,000  4 legs  k=10  150 queries per leg  150 evaluation queries (load x=0.375)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  31.4%  31.3%  31.2%  31.3%   cumulative encode  125.3% of N
+    union-nearest    reached  31.4%  44.5%  46.4%  47.0%   cumulative encode  169.3% of N
+    union-all        reached  31.4%  44.5%  53.6%  60.7%   cumulative encode  190.2% of N
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.817       0.676       0.571       0.449
+  previous-only              -       0.303       0.427       0.462
+  union-nearest              -       0.771       0.759       0.708
+  union-all                  -       0.771       0.793       0.795
+  passes, % of N          0.0%       44.5%       53.5%       60.4%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain (cumulative encode = forward passes over all 4 legs)
+  policy              K‘  cum.encode   % of N  eval passes   recall
+  ------------------------------------------------------------------
+  original-only      500     250,532   125.3%       62,523    0.449
+  previous-only      500     338,607   169.3%       49,173    0.462
+  union-nearest      500     338,607   169.3%       93,588    0.708
+  union-all          500     380,387   190.2%      120,886    0.795
+
+  No union policy beat an original-only row that spent at least as much; the literal design's best here is 0.449.
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023333_chain_synthetic_traffic/chain.json (12,775 bytes, sha256 38174c48319c)
+
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023333_chain_synthetic_traffic/chain.json
+
+[exit 0 after 30 s]

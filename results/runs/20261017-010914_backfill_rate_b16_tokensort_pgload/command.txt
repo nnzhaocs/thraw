@@ -1,0 +1,1 @@
+C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m thaw_pg backfill-rate --enc local:BAAI/bge-base-en-v1.5 --kprime 500 --chunk 16 --backfill-batch 16 --pg-load 1 --warmup 180 --out D:\SemView\thaw-r18\results\runs\20261017-010914_backfill_rate_b16_tokensort_pgload/backfill_rate.json

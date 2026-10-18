@@ -1,0 +1,1 @@
+/root/miniconda3/bin/python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --old sentence-transformers/all-MiniLM-L6-v2 --new BAAI/bge-small-en-v1.5 --cache-dir cache/ --dump-queries dump/leg0 --out /root/thaw-r18/results/runs/20261016-223205_chain_real_leg0/migration.json

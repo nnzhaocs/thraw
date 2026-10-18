@@ -1,0 +1,30 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m thaw_pg backfill-rate --enc local:BAAI/bge-base-en-v1.5 --kprime 500 --chunk 16 --backfill-batch 16 --pg-load 1 --warmup 180 --out D:\SemView\thaw-r18\results\runs\20261017-004535_backfill_rate_b16_tokensort_pgload/backfill_rate.json
+D:\SemView\thaw-r18\thaw_pg\encoders.py:103: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.m.get_sentence_embedding_dimension()
+The `tokenize` method is deprecated, please use `preprocess` instead.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\SemView\thaw-r18\thaw_pg\__main__.py", line 298, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "D:\SemView\thaw-r18\thaw_pg\__main__.py", line 259, in main
+    return backfill.run(out_dir, a.enc, a.kprime, a.queries, a.chunk,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SemView\thaw-r18\thaw_pg\backfill.py", line 410, in run
+    run_phase("warmup", bf(seed + 99), enc, texts, warmup_s)
+  File "D:\SemView\thaw-r18\thaw_pg\backfill.py", line 243, in run_phase
+    _, tm = encoder.encode_timed([texts[i] for i in ids])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SemView\thaw-r18\thaw_pg\encoders.py", line 122, in encode_timed
+    feats = {k: v.to(dev) for k, v in feats.items()}
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SemView\thaw-r18\thaw_pg\encoders.py", line 122, in <dictcomp>
+    feats = {k: v.to(dev) for k, v in feats.items()}
+                ^^^^
+AttributeError: 'str' object has no attribute 'to'
+repair stream: exact old-space top-500 for 5000 queries over N=500,000
+  468,670 repairs in the stream (93.7% of the corpus)
+warm-up 180s ...
+
+[exit 1 after 85 s]

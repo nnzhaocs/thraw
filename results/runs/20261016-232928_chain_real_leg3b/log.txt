@@ -1,0 +1,37 @@
+$ /root/miniconda3/bin/python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --max-length 512 --old BAAI/bge-m3 --new Qwen/Qwen3-Embedding-0.6B --cache-dir cache/ --dump-queries dump/leg3 --out /root/thaw-r18/results/runs/20261016-232928_chain_real_leg3b/migration.json
+/root/thaw-r18/semview/migration.py:1488: UserWarning: 'Qwen/Qwen3-Embedding-0.6B' looks instruction-tuned but has no prefix rule here (e5-mistral, gte-Qwen, nomic and similar each use their own format); pass --{old,new}-{query,passage}-prefix explicitly, or its top-k will not be the model as deployed
+  nq, np_ = resolve_prefixes(a.new, a.new_query_prefix, a.new_passage_prefix)
+corpus=beir  N=500000  D=5000
+old model: BAAI/bge-m3
+prefixes  old: query='' passage=''   new: query='' passage=''
+
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 391/391 [00:00<00:00, 31169.30it/s]
+  corpus embeddings from cache c60e09474748d76ad5f3eafb61126bce.npy
+new model: Qwen/Qwen3-Embedding-0.6B
+
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 310/310 [00:00<00:00, 8067.17it/s]
+  encoded 100,000 / 500,000
+  encoded 200,000 / 500,000
+  encoded 300,000 / 500,000
+  encoded 400,000 / 500,000
+  encoded 500,000 / 500,000
+dumped query vectors to dump/leg3: q_old (5000, 1024) float32, q_new (5000, 1024) float32
+load x = D*K'/N at K'=500: 5   (none in the informative range 0.05-3)
+
+     K  recall@K   sav%@D=5000
+------------------------------
+    10     0.339          91.1
+    20     0.439          83.7
+    50     0.558          66.6
+   100     0.637          48.4
+   200     0.706          28.8
+   500     0.785           9.7
+  1000     0.832           3.0
+  2000     0.872           0.7
+
+full recomputation would embed 500,000 units
+wrote /root/thaw-r18/results/runs/20261016-232928_chain_real_leg3b/migration.json (77,875 bytes, sha256 ee8a7c777d8f)
+
+[exit 0 after 1597 s]

@@ -1,0 +1,274 @@
+{
+  "tool": "chain",
+  "k": 10,
+  "kprimes": [
+    500
+  ],
+  "synthetic": true,
+  "inputs": {
+    "spaces": [
+      "synthetic-0",
+      "synthetic-1",
+      "synthetic-2",
+      "synthetic-3",
+      "synthetic-4"
+    ],
+    "queries": null,
+    "alpha": 0.5
+  },
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "host": "vm",
+    "argv": [
+      "analysis/chain.py",
+      "--synthetic",
+      "--legs",
+      "4",
+      "--kprimes",
+      "500",
+      "--rho",
+      "0.4",
+      "--out",
+      "/tmp/claude-0/sub/thaw/results/runs/20261015-223059_chain_synthetic_rho/chain.json"
+    ],
+    "dtype": "float32",
+    "device": null,
+    "numpy": "2.5.3",
+    "torch": null,
+    "sentence_transformers": null,
+    "transformers": null,
+    "faiss": null,
+    "psycopg": "0.0.0.0"
+  },
+  "fingerprint": {
+    "space_0": "c9b1988455b37b40",
+    "space_1": "3d3f16d35d679cf1",
+    "space_2": "81c96d94f2021fa8",
+    "space_3": "fbc5fa16c206393b",
+    "space_4": "20aa36ee51ddfa61"
+  },
+  "sweeps": [
+    {
+      "meta": {
+        "N": 200000,
+        "T": 4,
+        "k": 10,
+        "rho_target": 0.4,
+        "queries_per_leg": null,
+        "sizing": "constant reached fraction",
+        "kprimes": [
+          500
+        ],
+        "kprime_reach": 500,
+        "eval_queries": 150,
+        "eval_load_x": 0.375,
+        "legs": [
+          {
+            "leg": 1,
+            "warm_queries": 204,
+            "sources_while_serving": 1,
+            "reached": 80122,
+            "reached_frac": 0.4006,
+            "passes_at_reach_depth": 80122
+          },
+          {
+            "leg": 2,
+            "warm_queries": 124,
+            "sources_while_serving": 2,
+            "reached": 80045,
+            "reached_frac": 0.4002,
+            "passes_at_reach_depth": 80045
+          },
+          {
+            "leg": 3,
+            "warm_queries": 93,
+            "sources_while_serving": 3,
+            "reached": 80374,
+            "reached_frac": 0.4019,
+            "passes_at_reach_depth": 80374
+          },
+          {
+            "leg": 4,
+            "warm_queries": 74,
+            "sources_while_serving": 4,
+            "reached": 80372,
+            "reached_frac": 0.4019,
+            "passes_at_reach_depth": 80372
+          }
+        ]
+      },
+      "rows": [
+        {
+          "policy": "original-only",
+          "leg": 1,
+          "kprime": 500,
+          "passes": 62523,
+          "passes_pct": 31.26,
+          "window_mean": 500.0,
+          "recall_candidates": 0.8167,
+          "recall_at_k": 0.8167,
+          "sources": 1,
+          "partial_rows_kept": 0,
+          "note": "index 0 only: the design read literally"
+        },
+        {
+          "policy": "original-only",
+          "leg": 2,
+          "kprime": 500,
+          "passes": 62523,
+          "passes_pct": 31.26,
+          "window_mean": 500.0,
+          "recall_candidates": 0.676,
+          "recall_at_k": 0.676,
+          "sources": 1,
+          "partial_rows_kept": 0,
+          "note": "index 0 only: the design read literally"
+        },
+        {
+          "policy": "previous-only",
+          "leg": 2,
+          "kprime": 500,
+          "passes": 47943,
+          "passes_pct": 23.97,
+          "window_mean": 500.0,
+          "recall_candidates": 0.372,
+          "recall_at_k": 0.372,
+          "sources": 1,
+          "partial_rows_kept": 80122,
+          "note": "partial index 1 only, inside the 80,122 rows it reached"
+        },
+        {
+          "policy": "union-nearest",
+          "leg": 2,
+          "kprime": 500,
+          "passes": 91174,
+          "passes_pct": 45.59,
+          "window_mean": 900.5,
+          "recall_candidates": 0.792,
+          "recall_at_k": 0.792,
+          "sources": 2,
+          "partial_rows_kept": 80122,
+          "note": "index 0 plus the most recent partial index"
+        },
+        {
+          "policy": "union-all",
+          "leg": 2,
+          "kprime": 500,
+          "passes": 91174,
+          "passes_pct": 45.59,
+          "window_mean": 900.5,
+          "recall_candidates": 0.792,
+          "recall_at_k": 0.792,
+          "sources": 2,
+          "partial_rows_kept": 80122,
+          "note": "index 0 plus every partial index left behind"
+        },
+        {
+          "policy": "original-only",
+          "leg": 3,
+          "kprime": 500,
+          "passes": 62523,
+          "passes_pct": 31.26,
+          "window_mean": 500.0,
+          "recall_candidates": 0.5713,
+          "recall_at_k": 0.5713,
+          "sources": 1,
+          "partial_rows_kept": 0,
+          "note": "index 0 only: the design read literally"
+        },
+        {
+          "policy": "previous-only",
+          "leg": 3,
+          "kprime": 500,
+          "passes": 47221,
+          "passes_pct": 23.61,
+          "window_mean": 500.0,
+          "recall_candidates": 0.3733,
+          "recall_at_k": 0.3733,
+          "sources": 1,
+          "partial_rows_kept": 80045,
+          "note": "partial index 2 only, inside the 80,045 rows it reached"
+        },
+        {
+          "policy": "union-nearest",
+          "leg": 3,
+          "kprime": 500,
+          "passes": 91904,
+          "passes_pct": 45.95,
+          "window_mean": 927.0,
+          "recall_candidates": 0.73,
+          "recall_at_k": 0.73,
+          "sources": 2,
+          "partial_rows_kept": 80045,
+          "note": "index 0 plus the most recent partial index"
+        },
+        {
+          "policy": "union-all",
+          "leg": 3,
+          "kprime": 500,
+          "passes": 108747,
+          "passes_pct": 54.37,
+          "window_mean": 1234.6,
+          "recall_candidates": 0.79,
+          "recall_at_k": 0.79,
+          "sources": 3,
+          "partial_rows_kept": 160167,
+          "note": "index 0 plus every partial index left behind"
+        },
+        {
+          "policy": "original-only",
+          "leg": 4,
+          "kprime": 500,
+          "passes": 62523,
+          "passes_pct": 31.26,
+          "window_mean": 500.0,
+          "recall_candidates": 0.4493,
+          "recall_at_k": 0.4493,
+          "sources": 1,
+          "partial_rows_kept": 0,
+          "note": "index 0 only: the design read literally"
+        },
+        {
+          "policy": "previous-only",
+          "leg": 4,
+          "kprime": 500,
+          "passes": 46561,
+          "passes_pct": 23.28,
+          "window_mean": 500.0,
+          "recall_candidates": 0.3993,
+          "recall_at_k": 0.3993,
+          "sources": 1,
+          "partial_rows_kept": 80374,
+          "note": "partial index 3 only, inside the 80,374 rows it reached"
+        },
+        {
+          "policy": "union-nearest",
+          "leg": 4,
+          "kprime": 500,
+          "passes": 92249,
+          "passes_pct": 46.12,
+          "window_mean": 941.8,
+          "recall_candidates": 0.67,
+          "recall_at_k": 0.67,
+          "sources": 2,
+          "partial_rows_kept": 80374,
+          "note": "index 0 plus the most recent partial index"
+        },
+        {
+          "policy": "union-all",
+          "leg": 4,
+          "kprime": 500,
+          "passes": 121179,
+          "passes_pct": 60.59,
+          "window_mean": 1527.3,
+          "recall_candidates": 0.7747,
+          "recall_at_k": 0.7747,
+          "sources": 4,
+          "partial_rows_kept": 240541,
+          "note": "index 0 plus every partial index left behind"
+        }
+      ]
+    }
+  ]
+}

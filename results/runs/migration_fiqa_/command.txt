@@ -1,0 +1,1 @@
+python -m semview.migration --corpus beir --beir-name fiqa --path beir/ --old sentence-transformers/all-MiniLM-L6-v2 --new BAAI/bge-base-en-v1.5 --out migration_fiqa.json

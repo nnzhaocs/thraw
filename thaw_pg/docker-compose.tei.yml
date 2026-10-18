@@ -1,0 +1,38 @@
+# Text Embeddings Inference on the GPU server: the new model (repairs and new-
+# space queries) on :8080, the old model (old-space queries) on :8081.
+#
+# Set TEI_IMAGE to the tag for your GPU architecture -- see the TEI README
+# (github.com/huggingface/text-embeddings-inference): e.g. an Ampere A100,
+# an Ada L4/L40S/4090, or a Hopper H100 each have their own tag.
+services:
+  tei-new:
+    image: ${TEI_IMAGE:?set TEI_IMAGE to the TEI image tag for your GPU}
+    container_name: tei-new
+    ports: ["8080:80"]
+    volumes: ["tei-models:/data"]
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]
+    command: >
+      --model-id BAAI/bge-base-en-v1.5
+      --dtype float32
+      --max-client-batch-size 512
+      --max-batch-tokens 65536
+      --auto-truncate
+  tei-old:
+    image: ${TEI_IMAGE}
+    container_name: tei-old
+    ports: ["8081:80"]
+    volumes: ["tei-models:/data"]
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]
+    command: >
+      --model-id sentence-transformers/all-MiniLM-L6-v2
+      --dtype float32
+      --max-client-batch-size 512
+      --auto-truncate
+volumes:
+  tei-models:

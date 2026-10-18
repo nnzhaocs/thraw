@@ -1,0 +1,8 @@
+Reconstructed on 2026-10-17 from the flattened evidence bundle entry
+  evidence/20261014-040335_step1_check__step1_report.json
+because the original run directory was not present in any archive held
+by this session. The JSON is byte-identical to the bundle's copy and
+carries its own `environment` block, which records the interpreter,
+platform and package versions of the ORIGINAL run. What is lost is the
+original command line; it is not invented here. This is D-04 in
+RUNBOOK.md section 3.

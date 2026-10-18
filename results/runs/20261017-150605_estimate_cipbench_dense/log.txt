@@ -1,0 +1,12 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus cipbench --path D:/SemView/thaw-2026-10-11/cipbench_root --old lexical:word --kprimes 10,50 --out D:\SemView\thaw-1017\results\runs\20261017-150605_estimate_cipbench_dense/estimate.json
+corpus=cipbench  N=2366  D=2378  old=lexical:word
+NOTE: no new-model forward passes are performed by this tool.
+prefixes  old: query='' passage=''
+  K'=10    observed reached=0.773 (savings 22.7%)  asymptote=1.000 (power_sat, rmse=0.0142)
+           stable after 5 intents (0% of log); accurate: never within tolerance
+           ! fitted to half the log, the curve misses the observed end by -0.041: do not extrapolate from a partial log; use the observed value
+  K'=50    observed reached=0.984 (savings 1.6%)  asymptote=1.000 (power_sat, rmse=0.0216)
+           stable after 20 intents (1% of log); accurate: within 0.02 after 862 intents (36% of log)
+wrote D:\SemView\thaw-1017\results\runs\20261017-150605_estimate_cipbench_dense\estimate.json (4,084 bytes, sha256 a3bc23353d63)
+
+[exit 0 after 13 s]

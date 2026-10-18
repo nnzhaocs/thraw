@@ -1,0 +1,23 @@
+$ python analysis/drift_sweep.py --n 50000 --legs 4 --kprime 500 --eval-queries 60 --queries-per-leg 35 --seeds 0,1 --out /home/claude/chain_review/thaw/results/runs/20261016-094733_drift_sweep/drift_sweep.json
+
+  N=50,000  4 legs  K'=500  every variant calibrated so one generation = 0.929
+
+  drift assumption     seed  alpha  leg 1  literal  +recent    +all     gap  order
+  ------------------------------------------------------------------------------
+  independent             0  0.435  0.928    0.668    0.805   0.895   0.227     ok
+  independent             1  0.470  0.928    0.605    0.770   0.865   0.260     ok
+  shared-distortion       0  0.480  0.928    0.588    0.778   0.873   0.285     ok
+  shared-distortion       1  0.452  0.930    0.653    0.807   0.862   0.208     ok
+  converging              0  0.435  0.928    0.898    0.940   0.960   0.062     ok
+  converging              1  0.470  0.928    0.848    0.915   0.942   0.093     ok
+  target-seeking          0  0.307  0.930    0.127    0.533   0.707   0.580     ok
+  target-seeking          1  0.303  0.930    0.138    0.512   0.672   0.533     ok
+
+  the gap the chain section argues from spans 0.062 to 0.580 (9.4x) with the measured
+  quantity held fixed, so the magnitude is not identified by anything measured.
+  the policy order holds in every variant, so the direction is the part that survives.
+wrote /home/claude/chain_review/thaw/results/runs/20261016-094733_drift_sweep/drift_sweep.json (4,170 bytes, sha256 2598cf15ed1f)
+
+wrote /home/claude/chain_review/thaw/results/runs/20261016-094733_drift_sweep/drift_sweep.json
+
+[exit 0 after 49 s]

@@ -1,0 +1,14 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.procrustes --q-old D:/SemView/thaw-2026-10-11/results_20261013/runs_big/20261013-212259_msmarco_500k_dump/arrays/q_old.npy --q-new D:/SemView/thaw-2026-10-11/results_20261013/runs_big/20261013-212259_msmarco_500k_dump/arrays/q_new.npy --v-old cache/2aa13438bd13a33c3e6705a785ecfcc2.npy --v-new cache/5d103cb11869f81b2b5023901a9fc385.npy --k 10 --depths 10,200,500,2000 --rank 64 --out D:\SemView\thaw-r18\results\runs\20261016-222212_procrustes_minilm_bge/procrustes.json
+N=500,000  fit on 2500 queries, scored on 2500  k=10
+old space 384-d, new space 768-d (widths differ, map is rectangular)
+scheme                                           K'  recall@k
+old index, no adapter                             -    0.5103
+procrustes (orthogonal)                           -    0.1747
+low-rank affine (r=64, ridge=0.001)               -    0.1019
+thaw: old window, exact rerank                   10    0.5103
+thaw: old window, exact rerank                  200    0.8829
+thaw: old window, exact rerank                  500    0.9284
+thaw: old window, exact rerank                 2000    0.9702
+wrote D:\SemView\thaw-r18\results\runs\20261016-222212_procrustes_minilm_bge\procrustes.json (2,929 bytes, sha256 30f7e99c5958)
+
+[exit 0 after 43 s]

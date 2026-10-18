@@ -1,0 +1,1 @@
+/root/miniconda3/bin/python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --max-length 512 --old BAAI/bge-m3 --new Qwen/Qwen3-Embedding-0.6B --cache-dir cache/ --dump-queries dump/leg3 --out /root/thaw-r18/results/runs/20261016-232928_chain_real_leg3b/migration.json

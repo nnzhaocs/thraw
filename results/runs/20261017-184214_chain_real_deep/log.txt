@@ -1,0 +1,240 @@
+$ /root/miniconda3/bin/python analysis/chain.py --spaces cache/2aa13438bd13a33c3e6705a785ecfcc2.npy,cache/8256b4ed43559037dee7d45f28746869.npy,cache/5d103cb11869f81b2b5023901a9fc385.npy,cache/c60e09474748d76ad5f3eafb61126bce.npy,cache/ad3f5957fc3400a29de3e268ada99b08.npy --queries dump/leg0/q_old.npy,dump/leg1/q_old.npy,dump/leg2/q_old.npy,dump/leg3/q_old.npy,dump/leg3/q_new.npy --kprimes 500,1000,2000,4000,8000 --rho 0.2,0.4,0.6 --eval-queries 150 --out /root/thaw-r18/results/runs/20261017-184214_chain_real_deep/chain.json
+
+  N=500,000  4 legs  k=10  rho target 20% per leg  150 evaluation queries (load x=2.4)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  20.0%  20.0%  20.0%  20.1%  20.1%  20.1%  20.1%  20.0%  20.1%  20.0%  20.2%  20.2%  20.5%  20.1%  20.1%  20.1%  21.2%  20.1%  21.0%  20.2%   cumulative encode   82.5% of N   (230q 233q 238q 234q 114q 117q 118q 115q 57q 58q 59q 58q 29q 29q 30q 28q 15q 14q 15q 14q)
+    union-nearest    reached  20.0%  20.1%  20.0%  20.0%  20.1%  20.2%  20.1%  20.1%  20.1%  20.0%  20.3%  20.3%  20.5%  20.1%  20.2%  20.4%  21.2%  20.0%  21.1%  21.3%   cumulative encode   83.6% of N   (230q 152q 148q 146q 114q 76q 74q 73q 57q 36q 37q 36q 29q 18q 19q 18q 15q 9q 10q 9q)
+    union-all        reached  20.0%  20.1%  20.0%  20.1%  20.1%  20.2%  20.0%  20.1%  20.1%  20.0%  20.3%  20.6%  20.5%  20.1%  20.5%  20.8%  21.2%  20.0%  21.9%  21.0%   cumulative encode   84.2% of N   (230q 152q 112q 89q 114q 76q 57q 43q 57q 36q 30q 22q 29q 18q 15q 11q 15q 9q 8q 5q)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.960       0.945       0.867       0.798
+  previous-only              -       0.256       0.215       0.205
+  union-nearest              -       0.954       0.886       0.822
+  union-all                  -       0.954       0.893       0.839
+  passes, % of N          0.0%       20.1%       24.4%       28.0%   (union-all)
+
+  K'=1000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.977       0.961       0.895       0.848
+  previous-only              -       0.264       0.231       0.203
+  union-nearest              -       0.968       0.911       0.863
+  union-all                  -       0.968       0.919       0.883
+  passes, % of N          0.0%       32.9%       37.9%       41.6%   (union-all)
+
+  K'=2000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.989       0.972       0.917       0.882
+  previous-only              -       0.256       0.221       0.207
+  union-nearest              -       0.978       0.931       0.898
+  union-all                  -       0.978       0.935       0.904
+  passes, % of N          0.0%       50.1%       54.4%       57.6%   (union-all)
+
+  K'=4000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.994       0.983       0.934       0.904
+  previous-only              -       0.256       0.219       0.183
+  union-nearest              -       0.986       0.949       0.917
+  union-all                  -       0.986       0.957       0.927
+  passes, % of N          0.0%       69.7%       72.4%       74.1%   (union-all)
+
+  K'=8000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.997       0.992       0.952       0.931
+  previous-only              -       0.259       0.196       0.217
+  union-nearest              -       0.993       0.957       0.937
+  union-all                  -       0.993       0.969       0.949
+  passes, % of N          0.0%       86.8%       88.1%       88.9%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain: total = warm-up over 4 legs + what the evaluation adds
+  policy              K′   warm-up    +eval     total   % of N   recall
+  ----------------------------------------------------------------------
+  previous-only      500   400,579   19,278   419,857    84.0%    0.205
+  previous-only     1000   401,923   29,257   431,180    86.2%    0.203
+  previous-only     2000   403,703   40,301   444,004    88.8%    0.207
+  original-only      500   400,510   49,804   450,314    90.1%    0.798
+  previous-only     4000   405,738   44,902   450,640    90.1%    0.183
+  union-nearest      500   400,579   62,247   462,826    92.6%    0.822
+  previous-only     8000   418,249   48,752   467,001    93.4%    0.217
+  union-all          500   400,771   84,070   484,841    97.0%    0.839
+  original-only     1000   401,146   91,624   492,770    98.6%    0.848
+  union-nearest     1000   401,923  108,391   510,314   102.1%    0.863
+  union-all         1000   402,022  135,538   537,560   107.5%    0.883
+  original-only     2000   402,298  160,201   562,499   112.5%    0.882
+  union-nearest     2000   403,703  177,132   580,835   116.2%    0.898
+  union-all         2000   404,886  201,074   605,960   121.2%    0.904
+  original-only     4000   404,004  249,971   653,975   130.8%    0.904
+  union-nearest     4000   405,738  258,899   664,637   132.9%    0.917
+  union-all         4000   409,785  273,809   683,594   136.7%    0.927
+  original-only     8000   412,416  333,686   746,102   149.2%    0.931
+  union-nearest     8000   418,249  331,816   750,065   150.0%    0.937
+  union-all         8000   420,797  341,962   762,759   152.6%    0.949
+
+  UNTESTED: no original-only row spends as much as union-all, union-nearest, so nothing here controls for cost.
+  Add a deeper K' to --kprimes; the literal design's best at this depth is 0.931.
+
+  N=500,000  4 legs  k=10  rho target 40% per leg  150 evaluation queries (load x=2.4)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  40.0%  40.0%  40.0%  40.0%  40.1%  40.1%  40.0%  40.1%  40.1%  40.0%  40.1%  40.2%  40.2%  40.5%  40.3%  40.2%  40.0%  40.2%  40.4%  40.6%   cumulative encode  161.2% of N   (561q 567q 564q 567q 272q 278q 282q 278q 133q 138q 138q 136q 66q 69q 70q 68q 33q 34q 35q 33q)
+    union-nearest    reached  40.0%  40.1%  40.0%  40.1%  40.1%  40.1%  40.1%  40.1%  40.1%  40.0%  40.2%  40.1%  40.2%  40.2%  40.2%  40.1%  40.0%  41.2%  40.6%  41.1%   cumulative encode  162.9% of N   (561q 380q 374q 367q 272q 186q 182q 180q 133q 93q 91q 88q 66q 45q 46q 43q 33q 22q 24q 22q)
+    union-all        reached  40.0%  40.1%  40.0%  40.1%  40.1%  40.1%  40.1%  40.0%  40.1%  40.0%  40.1%  40.1%  40.2%  40.2%  40.3%  40.5%  40.0%  41.2%  40.2%  40.1%   cumulative encode  161.6% of N   (561q 380q 295q 233q 272q 186q 143q 111q 133q 93q 72q 57q 66q 45q 36q 27q 33q 22q 19q 13q)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.960       0.945       0.867       0.798
+  previous-only              -       0.483       0.461       0.395
+  union-nearest              -       0.961       0.893       0.834
+  union-all                  -       0.961       0.903       0.854
+  passes, % of N          0.0%       20.4%       25.0%       29.6%   (union-all)
+
+  K'=1000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.977       0.961       0.895       0.848
+  previous-only              -       0.479       0.416       0.397
+  union-nearest              -       0.973       0.918       0.882
+  union-all                  -       0.973       0.931       0.896
+  passes, % of N          0.0%       34.6%       40.7%       46.1%   (union-all)
+
+  K'=2000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.989       0.972       0.917       0.882
+  previous-only              -       0.451       0.436       0.399
+  union-nearest              -       0.984       0.942       0.907
+  union-all                  -       0.984       0.946       0.925
+  passes, % of N          0.0%       53.2%       59.3%       64.0%   (union-all)
+
+  K'=4000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.994       0.983       0.934       0.904
+  previous-only              -       0.454       0.419       0.386
+  union-nearest              -       0.989       0.953       0.930
+  union-all                  -       0.989       0.961       0.943
+  passes, % of N          0.0%       73.0%       77.1%       80.0%   (union-all)
+
+  K'=8000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.997       0.992       0.952       0.931
+  previous-only              -       0.462       0.466       0.393
+  union-nearest              -       0.994       0.971       0.944
+  union-all                  -       0.994       0.980       0.957
+  passes, % of N          0.0%       88.6%       90.2%       91.4%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain: total = warm-up over 4 legs + what the evaluation adds
+  policy              K′   warm-up    +eval     total   % of N   recall
+  ----------------------------------------------------------------------
+  previous-only      500   800,658   16,113   816,771   163.4%    0.395
+  previous-only     1000   801,999   28,326   830,325   166.1%    0.397
+  original-only      500   800,267   34,236   834,503   166.9%    0.798
+  union-nearest      500   800,658   43,322   843,980   168.8%    0.834
+  previous-only     2000   801,776   44,068   845,844   169.2%    0.399
+  union-all          500   801,058   60,220   861,278   172.3%    0.854
+  previous-only     4000   803,816   61,036   864,852   173.0%    0.386
+  original-only     1000   801,074   64,663   865,737   173.1%    0.848
+  union-nearest     1000   801,999   77,763   879,762   176.0%    0.882
+  previous-only     8000   814,426   69,611   884,037   176.8%    0.393
+  union-all         1000   801,806  102,262   904,068   180.8%    0.896
+  original-only     2000   801,698  111,709   913,407   182.7%    0.882
+  union-nearest     2000   801,776  130,553   932,329   186.5%    0.907
+  union-all         2000   801,447  156,646   958,093   191.6%    0.925
+  original-only     4000   805,954  177,518   983,472   196.7%    0.904
+  union-nearest     4000   803,816  193,841   997,657   199.5%    0.930
+  union-all         4000   806,065  213,242 1,019,307   203.9%    0.943
+  original-only     8000   806,104  243,678 1,049,782   210.0%    0.931
+  union-nearest     8000   814,426  247,749 1,062,175   212.4%    0.944
+  union-all         8000   807,836  261,220 1,069,056   213.8%    0.957
+
+  matched on total passes: union-all at K'=4000 serves 0.943 for 203.9% of N,
+  against original-only at K'=8000 serving 0.931 for 210.0%.
+
+  N=500,000  4 legs  k=10  rho target 60% per leg  150 evaluation queries (load x=2.4)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  60.0%  60.0%  60.0%  60.0%  60.0%  60.1%  60.1%  60.0%  60.0%  60.2%  60.1%  60.1%  60.1%  60.1%  60.1%  60.2%  60.3%  60.2%  60.6%  60.3%   cumulative encode  241.5% of N   (1107q 1101q 1105q 1109q 532q 541q 534q 543q 252q 264q 268q 262q 122q 130q 130q 126q 60q 63q 66q 64q)
+    union-nearest    reached  60.0%  60.1%  60.0%  60.0%  60.0%  60.0%  60.0%  60.1%  60.0%  60.1%  60.0%  60.1%  60.1%  60.4%  60.1%  60.2%  60.3%  60.2%  60.4%  60.3%   cumulative encode  241.2% of N   (1107q 758q 726q 735q 532q 371q 360q 353q 252q 181q 176q 172q 122q 91q 89q 85q 60q 43q 44q 41q)
+    union-all        reached  60.0%  60.1%  60.0%  60.0%  60.0%  60.0%  60.0%  60.1%  60.0%  60.1%  60.2%  60.2%  60.1%  60.4%  60.4%  60.1%  60.3%  60.2%  60.5%  60.2%   cumulative encode  241.3% of N   (1107q 758q 579q 474q 532q 371q 292q 230q 252q 181q 141q 109q 122q 91q 72q 57q 60q 43q 36q 26q)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.960       0.945       0.867       0.798
+  previous-only              -       0.657       0.619       0.567
+  union-nearest              -       0.971       0.899       0.850
+  union-all                  -       0.971       0.911       0.877
+  passes, % of N          0.0%       20.2%       24.8%       29.7%   (union-all)
+
+  K'=1000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.977       0.961       0.895       0.848
+  previous-only              -       0.673       0.622       0.575
+  union-nearest              -       0.979       0.923       0.892
+  union-all                  -       0.979       0.933       0.913
+  passes, % of N          0.0%       34.9%       41.2%       47.4%   (union-all)
+
+  K'=2000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.989       0.972       0.917       0.882
+  previous-only              -       0.663       0.610       0.577
+  union-nearest              -       0.987       0.945       0.918
+  union-all                  -       0.987       0.954       0.933
+  passes, % of N          0.0%       54.4%       61.2%       67.1%   (union-all)
+
+  K'=4000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.994       0.983       0.934       0.904
+  previous-only              -       0.662       0.633       0.579
+  union-nearest              -       0.992       0.962       0.940
+  union-all                  -       0.992       0.967       0.955
+  passes, % of N          0.0%       74.6%       79.6%       83.4%   (union-all)
+
+  K'=8000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.997       0.992       0.952       0.931
+  previous-only              -       0.664       0.617       0.602
+  union-nearest              -       0.996       0.975       0.957
+  union-all                  -       0.996       0.981       0.969
+  passes, % of N          0.0%       89.8%       92.0%       93.5%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain: total = warm-up over 4 legs + what the evaluation adds
+  policy              K′   warm-up    +eval     total   % of N   recall
+  ----------------------------------------------------------------------
+  previous-only      500 1,200,505   10,528 1,211,033   242.2%    0.567
+  previous-only     1000 1,200,486   19,100 1,219,586   243.9%    0.575
+  original-only      500 1,200,448   19,391 1,219,839   244.0%    0.798
+  union-nearest      500 1,200,505   26,057 1,226,562   245.3%    0.850
+  previous-only     2000 1,200,842   32,769 1,233,611   246.7%    0.577
+  union-all          500 1,200,701   36,121 1,236,822   247.4%    0.877
+  original-only     1000 1,200,958   38,060 1,239,018   247.8%    0.848
+  union-nearest     1000 1,200,486   47,675 1,248,161   249.6%    0.892
+  previous-only     4000 1,203,869   49,046 1,252,915   250.6%    0.579
+  union-all         1000 1,200,603   63,523 1,264,126   252.8%    0.913
+  original-only     2000 1,202,019   69,247 1,271,266   254.3%    0.882
+  previous-only     8000 1,206,022   66,640 1,272,662   254.5%    0.602
+  union-nearest     2000 1,200,842   81,114 1,281,956   256.4%    0.918
+  union-all         2000 1,202,380  101,028 1,303,408   260.7%    0.933
+  original-only     4000 1,202,911  110,603 1,313,514   262.7%    0.904
+  union-nearest     4000 1,203,869  123,171 1,327,040   265.4%    0.940
+  union-all         4000 1,204,961  140,845 1,345,806   269.2%    0.955
+  original-only     8000 1,207,343  155,771 1,363,114   272.6%    0.931
+  union-nearest     8000 1,206,022  163,919 1,369,941   274.0%    0.957
+  union-all         8000 1,206,384  172,761 1,379,145   275.8%    0.969
+
+  matched on total passes: union-all at K'=2000 serves 0.933 for 260.7% of N,
+  against original-only at K'=4000 serving 0.904 for 262.7%.
+wrote /root/thaw-r18/results/runs/20261017-184214_chain_real_deep/chain.json (203,741 bytes, sha256 139abd09ddb3)
+
+wrote /root/thaw-r18/results/runs/20261017-184214_chain_real_deep/chain.json
+
+[exit 0 after 1873 s]

@@ -1,0 +1,22 @@
+# Python 3.10 or newer (the test suite compiles everything with 3.10/3.11 when present)
+# Core: everything in semview/ and analysis/ runs on these.
+numpy>=1.24
+scikit-learn>=1.3          # the offline lexical stand-in encoders
+scipy>=1.10                # semview.estimate curve fit (also pulled in by scikit-learn)
+matplotlib>=3.7            # analysis/*_plot.py
+
+# Neural encoders (MiniLM, BGE, E5, mpnet, DPR). Install a torch build that
+# matches your CUDA first: https://pytorch.org/get-started/locally/
+sentence-transformers>=3.0
+torch>=2.1
+transformers>=4.40
+
+# Corpora
+datasets>=3.0              # DPR Wikipedia shards (parquet, via hf://)
+pyarrow>=14                # parquet reader for the same
+huggingface_hub>=0.24
+
+# Optional, and worth it at scale
+faiss-cpu>=1.8             # or faiss-gpu; exact IndexFlatIP, sharded. REQUIRED at 8.8M:
+                           # the numpy fallback is sharded and correct, but slow.
+qdrant-client>=1.9         # optional: semview.serve.QdrantIndex (library use and its test; no CLI flag)

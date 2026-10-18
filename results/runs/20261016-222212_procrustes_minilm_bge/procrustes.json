@@ -1,0 +1,86 @@
+{
+  "queries_fit": 2500,
+  "queries_eval": 2500,
+  "k": 10,
+  "N": 500000,
+  "d_old": 384,
+  "d_new": 768,
+  "schemes": [
+    {
+      "scheme": "old index, no adapter",
+      "kprime": null,
+      "recall_at_k": 0.5103200000000001,
+      "note": "the floor: what the stale index returns for a new-model query"
+    },
+    {
+      "scheme": "procrustes (orthogonal)",
+      "kprime": null,
+      "recall_at_k": 0.17468000000000003,
+      "note": "query mapped into the old space, old index searched, answer returned as-is -- no exact rerank behind it, so this error is permanent for every unit"
+    },
+    {
+      "scheme": "low-rank affine (r=64, ridge=0.001)",
+      "kprime": null,
+      "recall_at_k": 0.10192000000000001,
+      "note": "query mapped into the old space, old index searched, answer returned as-is -- no exact rerank behind it, so this error is permanent for every unit"
+    },
+    {
+      "scheme": "thaw: old window, exact rerank",
+      "kprime": 10,
+      "recall_at_k": 0.5103200000000001,
+      "note": "exact in the new space over the window; the units it reaches are re-embedded"
+    },
+    {
+      "scheme": "thaw: old window, exact rerank",
+      "kprime": 200,
+      "recall_at_k": 0.8828800000000001,
+      "note": "exact in the new space over the window; the units it reaches are re-embedded"
+    },
+    {
+      "scheme": "thaw: old window, exact rerank",
+      "kprime": 500,
+      "recall_at_k": 0.9284400000000002,
+      "note": "exact in the new space over the window; the units it reaches are re-embedded"
+    },
+    {
+      "scheme": "thaw: old window, exact rerank",
+      "kprime": 2000,
+      "recall_at_k": 0.9702400000000001,
+      "note": "exact in the new space over the window; the units it reaches are re-embedded"
+    }
+  ],
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "D:\\SemView\\thaw-r18\\semview\\procrustes.py",
+      "--q-old",
+      "D:/SemView/thaw-2026-10-11/results_20261013/runs_big/20261013-212259_msmarco_500k_dump/arrays/q_old.npy",
+      "--q-new",
+      "D:/SemView/thaw-2026-10-11/results_20261013/runs_big/20261013-212259_msmarco_500k_dump/arrays/q_new.npy",
+      "--v-old",
+      "cache/2aa13438bd13a33c3e6705a785ecfcc2.npy",
+      "--v-new",
+      "cache/5d103cb11869f81b2b5023901a9fc385.npy",
+      "--k",
+      "10",
+      "--depths",
+      "10,200,500,2000",
+      "--rank",
+      "64",
+      "--out",
+      "D:\\SemView\\thaw-r18\\results\\runs\\20261016-222212_procrustes_minilm_bge/procrustes.json"
+    ],
+    "dtype": null,
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

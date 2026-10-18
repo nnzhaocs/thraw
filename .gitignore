@@ -1,0 +1,11 @@
+# The 36 GB of measured data cannot live in a GitHub repo (100 MB per-file
+# hard limit). It stays in this folder locally; see README.
+beir/
+cache/
+step1_data/
+external/
+*.partial
+*.progress
+__pycache__/
+*.pyc
+.pytest_cache/

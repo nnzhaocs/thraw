@@ -1,0 +1,530 @@
+{
+  "tool": "backfill-rate",
+  "encoder": "local:BAAI/bge-base-en-v1.5",
+  "dtype": "float32",
+  "kprime": 500,
+  "queries": 5000,
+  "N": 500000,
+  "chunk": 16,
+  "backfill_batch": 16,
+  "backfill_sort_window": 10000,
+  "repair_sort": true,
+  "seconds_per_phase": 300,
+  "warmup_s": 180.0,
+  "repair_gap_ms": 0.0,
+  "repairs_in_stream": 468670,
+  "pg_load": {
+    "threads": 1,
+    "window_searches": 85615
+  },
+  "telemetry": true,
+  "phases": [
+    {
+      "name": "backfill_A",
+      "units": 69536,
+      "batches": 4346,
+      "wall_s": 300.1,
+      "stream_exhausted": false,
+      "mean_batch": 16.0,
+      "ms_per_unit": 4.2983,
+      "tok_ms_per_unit": 0.2015,
+      "fwd_ms_per_unit": 4.0848,
+      "copy_ms_per_unit": 0.012,
+      "tokens_per_unit": 76.26,
+      "padding_factor": 1.2815,
+      "fwd_ms_per_padded_token": 0.041797,
+      "burst_ms_per_unit": 2.9972,
+      "sustained_ms_per_unit": 4.2983,
+      "ms_per_unit_series": [
+        [
+          10.0,
+          2.9972
+        ],
+        [
+          20.0,
+          3.7352
+        ],
+        [
+          30.0,
+          4.59
+        ],
+        [
+          40.0,
+          6.4771
+        ],
+        [
+          50.0,
+          3.6376
+        ],
+        [
+          60.0,
+          3.6955
+        ],
+        [
+          70.0,
+          4.2059
+        ],
+        [
+          80.0,
+          5.9247
+        ],
+        [
+          90.0,
+          4.6143
+        ],
+        [
+          100.0,
+          3.3776
+        ],
+        [
+          110.0,
+          3.9608
+        ],
+        [
+          120.0,
+          5.1503
+        ],
+        [
+          130.0,
+          6.7467
+        ],
+        [
+          140.0,
+          3.1512
+        ],
+        [
+          150.0,
+          3.7938
+        ],
+        [
+          160.0,
+          4.5742
+        ],
+        [
+          170.0,
+          6.5628
+        ],
+        [
+          180.0,
+          3.6646
+        ],
+        [
+          190.0,
+          3.6603
+        ],
+        [
+          200.0,
+          4.2015
+        ],
+        [
+          210.0,
+          5.8364
+        ],
+        [
+          220.0,
+          4.4798
+        ],
+        [
+          230.0,
+          3.4584
+        ],
+        [
+          240.0,
+          3.9562
+        ],
+        [
+          250.0,
+          5.3035
+        ],
+        [
+          260.0,
+          7.2154
+        ],
+        [
+          270.0,
+          3.1084
+        ],
+        [
+          280.0,
+          3.7801
+        ],
+        [
+          290.0,
+          4.6586
+        ],
+        [
+          300.0,
+          6.6872
+        ],
+        [
+          310.0,
+          8.1157
+        ]
+      ],
+      "gpu": {
+        "samples": 244,
+        "sm_clock_mean": 1692.0,
+        "sm_clock_min": 1335.0,
+        "temp_max": 91.0,
+        "power_mean": 62.2,
+        "util_mean": 93.9
+      }
+    },
+    {
+      "name": "repair",
+      "units": 69423,
+      "batches": 4413,
+      "wall_s": 300.0,
+      "stream_exhausted": false,
+      "mean_batch": 15.73,
+      "ms_per_unit": 4.3048,
+      "tok_ms_per_unit": 0.2024,
+      "fwd_ms_per_unit": 4.0903,
+      "copy_ms_per_unit": 0.0121,
+      "tokens_per_unit": 77.39,
+      "padding_factor": 1.257,
+      "fwd_ms_per_padded_token": 0.042047,
+      "burst_ms_per_unit": 4.1208,
+      "sustained_ms_per_unit": 4.3048,
+      "ms_per_unit_series": [
+        [
+          10.0,
+          4.1208
+        ],
+        [
+          20.0,
+          4.7588
+        ],
+        [
+          30.0,
+          4.1302
+        ],
+        [
+          40.0,
+          4.3837
+        ],
+        [
+          50.0,
+          4.2566
+        ],
+        [
+          60.0,
+          4.055
+        ],
+        [
+          70.0,
+          4.2128
+        ],
+        [
+          80.0,
+          4.7304
+        ],
+        [
+          90.0,
+          4.4155
+        ],
+        [
+          100.0,
+          4.1505
+        ],
+        [
+          110.0,
+          4.4367
+        ],
+        [
+          120.0,
+          4.6508
+        ],
+        [
+          130.0,
+          4.1671
+        ],
+        [
+          140.0,
+          4.7182
+        ],
+        [
+          150.0,
+          4.0895
+        ],
+        [
+          160.0,
+          4.1051
+        ],
+        [
+          170.0,
+          4.0121
+        ],
+        [
+          180.0,
+          4.2494
+        ],
+        [
+          190.0,
+          4.3905
+        ],
+        [
+          200.0,
+          4.0682
+        ],
+        [
+          210.0,
+          4.2675
+        ],
+        [
+          220.0,
+          4.504
+        ],
+        [
+          230.0,
+          4.3658
+        ],
+        [
+          240.0,
+          4.4307
+        ],
+        [
+          250.0,
+          4.2856
+        ],
+        [
+          260.0,
+          4.3299
+        ],
+        [
+          270.0,
+          4.2679
+        ],
+        [
+          280.0,
+          4.3506
+        ],
+        [
+          290.0,
+          4.2342
+        ],
+        [
+          300.0,
+          4.2853
+        ],
+        [
+          310.0,
+          3.2088
+        ]
+      ],
+      "gpu": {
+        "samples": 244,
+        "sm_clock_mean": 1664.0,
+        "sm_clock_min": 210.0,
+        "temp_max": 90.0,
+        "power_mean": 61.7,
+        "util_mean": 93.9
+      }
+    },
+    {
+      "name": "backfill_B",
+      "units": 69408,
+      "batches": 4338,
+      "wall_s": 300.0,
+      "stream_exhausted": false,
+      "mean_batch": 16.0,
+      "ms_per_unit": 4.3051,
+      "tok_ms_per_unit": 0.2009,
+      "fwd_ms_per_unit": 4.0923,
+      "copy_ms_per_unit": 0.0119,
+      "tokens_per_unit": 76.47,
+      "padding_factor": 1.2769,
+      "fwd_ms_per_padded_token": 0.041909,
+      "burst_ms_per_unit": 3.0417,
+      "sustained_ms_per_unit": 4.3051,
+      "ms_per_unit_series": [
+        [
+          10.0,
+          3.0417
+        ],
+        [
+          20.0,
+          3.768
+        ],
+        [
+          30.0,
+          4.601
+        ],
+        [
+          40.0,
+          6.4136
+        ],
+        [
+          50.0,
+          3.7381
+        ],
+        [
+          60.0,
+          3.5941
+        ],
+        [
+          70.0,
+          4.2552
+        ],
+        [
+          80.0,
+          5.855
+        ],
+        [
+          90.0,
+          5.101
+        ],
+        [
+          100.0,
+          3.3591
+        ],
+        [
+          110.0,
+          3.9259
+        ],
+        [
+          120.0,
+          5.1536
+        ],
+        [
+          130.0,
+          6.976
+        ],
+        [
+          140.0,
+          3.2351
+        ],
+        [
+          150.0,
+          3.7755
+        ],
+        [
+          160.0,
+          4.4057
+        ],
+        [
+          170.0,
+          6.215
+        ],
+        [
+          180.0,
+          3.8804
+        ],
+        [
+          190.0,
+          3.6575
+        ],
+        [
+          200.0,
+          4.2425
+        ],
+        [
+          210.0,
+          5.5707
+        ],
+        [
+          220.0,
+          5.5108
+        ],
+        [
+          230.0,
+          3.3412
+        ],
+        [
+          240.0,
+          3.8276
+        ],
+        [
+          250.0,
+          4.8773
+        ],
+        [
+          260.0,
+          6.7192
+        ],
+        [
+          270.0,
+          3.3088
+        ],
+        [
+          280.0,
+          3.7082
+        ],
+        [
+          290.0,
+          4.3695
+        ],
+        [
+          300.0,
+          6.1534
+        ],
+        [
+          310.0,
+          7.6023
+        ]
+      ],
+      "gpu": {
+        "samples": 245,
+        "sm_clock_mean": 1684.0,
+        "sm_clock_min": 1410.0,
+        "temp_max": 90.0,
+        "power_mean": 61.7,
+        "util_mean": 93.8
+      }
+    }
+  ],
+  "result": {
+    "phase_wall_s": [
+      300.1,
+      300.0,
+      300.0
+    ],
+    "phases_equal_length": true,
+    "penalty": 1.0007,
+    "penalty_burst": 1.3648,
+    "backfill_drift_B_over_A": 1.0016,
+    "factors": {
+      "which_units_tokens_per_unit": 1.0134,
+      "batching_padding": 0.9826,
+      "device_ms_per_padded_token": 1.0046,
+      "forward_penalty": 1.0005,
+      "forward_share_of_repair_time": 0.9502,
+      "tokenize_ms_per_unit_repair": 0.2024,
+      "tokenize_ms_per_unit_backfill": 0.2012
+    },
+    "breakeven_reached_fraction": 0.9993
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "D:\\SemView\\thaw-2026-10-11\\thaw_pg\\__main__.py",
+      "backfill-rate",
+      "--enc",
+      "local:BAAI/bge-base-en-v1.5",
+      "--kprime",
+      "500",
+      "--chunk",
+      "16",
+      "--backfill-batch",
+      "16",
+      "--pg-load",
+      "1",
+      "--warmup",
+      "180",
+      "--out",
+      "D:\\SemView\\thaw-2026-10-11\\results\\runs\\20261013-191607_backfill_rate_b16_pgload/backfill_rate.json"
+    ],
+    "dtype": "float32",
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

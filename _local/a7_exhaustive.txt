@@ -1,0 +1,392 @@
+uncovered: 88; evidence numeric leaves: 21065
+with at least one exact home: 69
+with NO home anywhere in the bundle: 19
+
+body.tex:174  0.012
+    total forward-pass budget the advantage is \textbf{+0.012} when each leg
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[1].copy_ms_per_unit = 0.0119
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=10].reached = 0.0123
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=10].x_dk_over_n = 0.0125
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  phases[0].copy_ms_per_unit = 0.012
+body.tex:265  99
+    one architectural family a residual MLP recovers 98--99\% of the new model's
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].savings_pct = 99.45
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].pred_savings_indep = 99.44
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].pred_savings_exp = 99.44
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].pred_savings_linear = 99.44
+body.tex:1002  0.0024
+    moves ground truth by $0.0024$. Whatever raises recall with $N$, it is a
+    -> 20261012-145915_migration_msmarco_8m_dseed5__migration.jso  frontier[kprime=500].recall_on_d_subset_sd = 0.0024
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=100].recall_on_d_subset_sd = 0.0024
+    -> pair_all-mpnet-base-v2___pair_all-mpnet-base-v2.json  frontier[kprime=2000].reached_sd = 0.0024
+body.tex:1018  0.762
+    DPR $\to$ BGE         & 0.606 & 0.762 & 0.842 & 0.891 & \textbf{0.930} \\
+    -> 20261017-225704_scaling_mechanism__scaling_mechanism.json  rows[N=8841823].dup_pairs_mean = 0.762
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_at_kprime = 0.762
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_chance_corrected = 0.7619
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_at_kprime = 0.762
+body.tex:1025  0.004
+    within 0.004 of the raw ones at these depths.}
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].recall_on_d_subset_sd = 0.0035
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].reached = 0.004
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].x_dk_over_n = 0.004
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].recall_on_d_subset_sd = 0.0042
+body.tex:1043  0.922
+    MiniLM $\rightarrow$ BGE reaches 0.922 at $K' = 500$ on the same 446{,}392
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_candidates = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_at_k = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_candidates = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_at_k = 0.922
+body.tex:1046  0.922
+    and 0.922 on the DPR corpus.
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_candidates = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_at_k = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_candidates = 0.922
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].recall_at_k = 0.922
+body.tex:1059  0.762
+    DPR (context encoder)        & 0.606 & 0.762 & 0.842 & 2000 \\
+    -> 20261017-225704_scaling_mechanism__scaling_mechanism.json  rows[N=8841823].dup_pairs_mean = 0.762
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_at_kprime = 0.762
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_chance_corrected = 0.7619
+    -> migration_dpr_490k___migration_dpr_490k.json  frontier[kprime=200].recall_at_kprime = 0.762
+body.tex:1162  0.950
+    order so the repaired set fills as it goes, union at $K' = 200$ reaches 0.950
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=1000].recall_on_d_subset = 0.9505
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  result.factors.forward_share_of_repair_time = 0.9502
+    -> 20261017-012850_backfill_rate_b32_tokensort_idle__backfill  result.factors.forward_share_of_repair_time = 0.9499
+    -> 20261017-022728_backfill_rate_b64_tokensort_pgload__backfi  result.factors.forward_penalty = 0.95
+body.tex:1168  0.896
+    while the first decile moves only from 0.896 to 0.905 --- the earliest queries
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  baselines[scheme=merge-calibrated].recall_at_k = 0.89556
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_at_k = 0.896
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+body.tex:1174  0.9062
+    \texttt{docs\_new}, union at $K' = 200$ reaches 0.9062 against the base design's
+    -> 20261016-220554_opsafe_replace__operator_safety.json  report.rows[4].mixed_index_recall_at_k = 0.9062000000000001
+body.tex:1240  0.961
+    original index only      & 0.977 & 0.961 & 0.895 & \textbf{0.848} & 173.1 \\
+    -> 20261012-145054_migration_msmarco_8m_dseed4__migration.jso  frontier[kprime=500].recall_on_d_subset = 0.9614
+    -> 20261013-213943_gen2_union_msmarco__gen2_union.json  schemes[kprime=500].recall_candidates = 0.961
+    -> 20261013-213943_gen2_union_msmarco__gen2_union.json  schemes[kprime=500].recall_at_k = 0.961
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=1000].recall_candidates = 0.9613
+body.tex:1242  0.882
+    original + most recent   & --- & 0.973 & 0.918 & 0.882 & 176.0 \\
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=200].recall_on_d_subset = 0.8817
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_candidates = 0.882
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_at_k = 0.882
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.882
+body.tex:1243  0.896
+    original + all partial   & --- & 0.973 & 0.931 & \textbf{0.896} & 180.8 \\
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  baselines[scheme=merge-calibrated].recall_at_k = 0.89556
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_at_k = 0.896
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+body.tex:1254  4.4
+    every abandoned index returns 4.8 of them at the same depth, for 4.4\% more
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].ms_per_unit_series[14][1] = 4.4404
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].ms_per_unit_series[18][1] = 4.4113
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].ms_per_unit_series[22][1] = 4.4067
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].ms_per_unit_series[26][1] = 4.3763
+body.tex:1279  0.012
+    \textbf{+0.012}. At 60\% reach the margin reaches +0.024. \textbf{At 20\% reach
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[1].copy_ms_per_unit = 0.0119
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=10].reached = 0.0123
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=10].x_dk_over_n = 0.0125
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  phases[0].copy_ms_per_unit = 0.012
+body.tex:1279  0.024
+    \textbf{+0.012}. At 60\% reach the margin reaches +0.024. \textbf{At 20\% reach
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=10].reached = 0.0242
+    -> 20261017-150642_estimate_fiqa_dense__estimate.json  estimates[kprime=500].curve_reached[2] = 0.024376
+body.tex:1281  0.004
+    and beats every union row, the best of which trails by 0.004. The advantage
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].recall_on_d_subset_sd = 0.0035
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].reached = 0.004
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].x_dk_over_n = 0.004
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].recall_on_d_subset_sd = 0.0042
+body.tex:1290  0.882
+    to 0.882 over three legs); keeping all decays more slowly still (0.973 to
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=200].recall_on_d_subset = 0.8817
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_candidates = 0.882
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_at_k = 0.882
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.882
+body.tex:1291  0.896
+    0.896) for 2.7\% more passes. The gap grows with chain length, because a query
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  baselines[scheme=merge-calibrated].recall_at_k = 0.89556
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].recall_at_k = 0.896
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[1].rows[kprime=1000].recall_candidates = 0.896
+body.tex:1291  2.7
+    0.896) for 2.7\% more passes. The gap grows with chain length, because a query
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].burst_ms_per_unit = 2.7248
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].ms_per_unit_series[0][1] = 2.7248
+    -> 20261017-004939_backfill_rate_b16_tokensort_idle__backfill  phases[0].ms_per_unit_series[15][1] = 2.7495
+    -> 20261017-004939_backfill_rate_b16_tokensort_idle__backfill  phases[0].ms_per_unit_series[19][1] = 2.651
+body.tex:1341  9.3
+    batch of 213, with only 9.3\% of repair work in batches below 32 --- and
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=500].eval_passes_marginal_pct = 9.32
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=1000].eval_passes_marginal_pct = 9.3
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=1000].eval_passes_marginal_pct = 9.3
+    -> 20261017-003632_tab_form_rows__tab_form.json  rows[N=212876].residuals[kprime=200].residual = 9.312092550929634
+body.tex:1365  1.016
+    or near the device's best batch: chunks of 16 cost $1.016\times$ the optimum and
+    -> 20261017-010914_backfill_rate_b16_tokensort_pgload__backfi  result.factors.which_units_tokens_per_unit = 1.0158
+body.tex:1382  3.780
+    16 (fastest) & 3.780 & 3.772 & $\mathbf{0.998}$ \\
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  phases[0].ms_per_unit_series[27][1] = 3.7801
+body.tex:1383  3.785
+    32           & 3.897 & 3.785 & $0.972$ \\
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].fwd_ms_per_unit = 3.7854
+    -> 20261017-004939_backfill_rate_b16_tokensort_idle__backfill  phases[2].ms_per_unit_series[20][1] = 3.785
+body.tex:1383  0.972
+    32           & 3.897 & 3.785 & $0.972$ \\
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=2000].recall_on_d_subset = 0.9724
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_candidates = 0.972
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].recall_at_k = 0.972
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=2000].recall_candidates = 0.972
+body.tex:1403  1.021
+    $1.017 \to 1.021$) and the penalty goes $0.898 \to 0.917$ at the backfill batch
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  result.factors.device_ms_per_padded_token = 1.0206
+body.tex:1404  0.019
+    that was loaded, 64, a $0.019$ shift. Repeating the measurement at the ledger's
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=50].reached = 0.0195
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].reached = 0.0195
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=50].reached = 0.0195
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=100].reached = 0.0195
+body.tex:1406  0.003
+    the ledger is actually taken the shift is $0.003$, an order of magnitude
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].recall_on_d_subset_sd = 0.0035
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].recall_on_d_subset_sd = 0.0028
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].copy_ms_per_unit = 0.0034
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].copy_ms_per_unit = 0.0034
+body.tex:1411  43.1
+    at $D = 200$, 43.1\% at $D = 10^3$ and 13.9\% at $D = 3 \times 10^3$, against
+    -> 20261017-003632_tab_form_rows__tab_form.json  rows[N=212876].residuals[kprime=500].measured_pct = 43.1392
+body.tex:1411  13.9
+    at $D = 200$, 43.1\% at $D = 10^3$ and 13.9\% at $D = 3 \times 10^3$, against
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=2000].eval_passes_marginal_pct = 13.85
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[1].rows[kprime=8000].eval_passes_marginal_pct = 13.92
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[2].rows[kprime=2000].eval_passes_marginal_pct = 13.85
+body.tex:1413  12.6
+    upper bound the same four are 95.1, 82.3, 42.3 and 12.6\%, so the two
+    -> 20261016-094835_chain_synthetic_traffic__chain.json  sweeps[0].rows[kprime=1000].eval_passes_marginal_pct = 12.64
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=500].eval_passes_marginal_pct = 12.6
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=500].eval_passes_marginal_pct = 12.6
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=1000].eval_passes_marginal_pct = 12.62
+body.tex:1429  2.0
+    all 6,980 dev intents $\rho = 0.965$, a net saving of 2.0\% with batched
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=200].x_dk_over_n = 2.0
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=1000].x_dk_over_n = 2.0
+    -> 20261015-223042_chain_synthetic_traffic__chain.json  sweeps[0].meta.legs[leg=2].leg = 2.0
+    -> 20261015-223042_chain_synthetic_traffic__chain.json  sweeps[0].meta.legs[leg=2].sources_while_serving = 2.0
+body.tex:1443  0.447
+    (reached 0.447 against 0.510) but in the direction that \emph{raises} savings
+    -> 20261016-023904_chain_synthetic_traffic_seed1__chain.json  sweeps[0].meta.legs[policy=union-nearest].reached_fr = 0.4471
+    -> 20261016-023904_chain_synthetic_traffic_seed1__chain.json  sweeps[0].meta.legs[policy=union-all].reached_frac = 0.4471
+    -> 20261016-023936_chain_synthetic_traffic_seed2__chain.json  sweeps[0].meta.legs[policy=union-nearest].reached_fr = 0.4468
+    -> 20261016-023936_chain_synthetic_traffic_seed2__chain.json  sweeps[0].meta.legs[policy=union-all].reached_frac = 0.4468
+body.tex:1476  37
+    the closed form predicted 37\%, so real clicks concentrate far more than a
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=500].pred_savings_linear = 37.5
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=500].pred_savings_indep = 36.77
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=500].pred_savings_exp = 36.79
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].eval_passes_marginal_pct = 37.13
+body.tex:1478  34
+    $K' = 500$; there the same traffic leaves 34\% untouched against a predicted
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.75
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.69
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.5
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=2000].passes_pct = 34.4
+body.tex:1479  8
+    8\%, the same order of conservatism at a load $2.5\times$ further out.
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  phases[0].ms_per_unit_series[30][1] = 8.1157
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  phases[2].ms_per_unit_series[30][1] = 7.6023
+    -> 20261014-040335_step1_check__step1_report.json  depth.rows[kprime=500].p50_ms = 8.28
+    -> 20261014-111235_step2_load_t8__step2.json  threads = 8.0
+body.tex:1505  34
+    $10^3$ & 0.66 & 34\% \\
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.75
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.69
+    -> 20261016-094945_chain_synthetic_rho__chain.json  sweeps[0].rows[kprime=1000].passes_pct = 33.5
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=2000].passes_pct = 34.4
+body.tex:1506  4
+    $10^4$ & 0.96 &  4\% \\
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].ms_per_unit = 3.9383
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].fwd_ms_per_unit = 3.8051
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].sustained_ms_per_unit = 3.9383
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].ms_per_unit_series[5][1] = 3.7939
+body.tex:1507  0.997
+    $10^5$ & 0.997 & 0.3\% \\
+    -> 20261017-150338_estimate_cipbench_dense__estimate.json  estimates[kprime=500].curve_reached[14] = 0.997464
+    -> 20261017-150338_estimate_cipbench_dense__estimate.json  estimates[kprime=500].curve_reached[15] = 0.997464
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[0].rows[kprime=8000].recall_candidates = 0.9967
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[0].rows[kprime=8000].recall_at_k = 0.9967
+body.tex:1507  0.3
+    $10^5$ & 0.997 & 0.3\% \\
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].recall_on_d_subset_sd = 0.0035
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].recall_on_d_subset_sd = 0.0028
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].copy_ms_per_unit = 0.0034
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].copy_ms_per_unit = 0.0034
+body.tex:1508  0.2
+    $10^6$ & 0.998 & 0.2\% \\
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].reached = 0.002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].x_dk_over_n = 0.002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].reached = 0.002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].x_dk_over_n = 0.002
+body.tex:1540  0.960
+    backfill, traffic order    & 0.353 & \textbf{0.960} \\
+    -> 20261012-144200_migration_msmarco_8m_dseed3__migration.jso  frontier[kprime=500].recall_on_d_subset = 0.9595
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=1000].reached = 0.9603
+    -> 20261014-104501_step2_load_t1__step2.json  runs[kprime=500].recall_e2e_by_decile[0] = 0.96
+    -> 20261014-110054_step2_load_t4__step2.json  runs[kprime=500].recall_e2e_by_decile[0] = 0.96
+body.tex:1550  31.1
+    every other scheme is then given exactly its spend --- 31.1\% of the corpus at
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[2].rows[kprime=8000].eval_passes_marginal_pct = 31.15
+body.tex:1551  93.7
+    $D = 400$ distinct intents and 93.7\% at $D = 5{,}000$: a migration that still
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=50].pred_savings_linear = 93.75
+body.tex:1560  82.5
+    version charged lazy for the warm-up windows alone ($B = 82.5\%$) and gave every
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[0].meta.legs[policy=original-only].cumulative = 82.5
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[0].rows[kprime=8000].cumulative_encoded_pct = 82.5
+body.tex:1579  93.7
+    lazy's 0.934. At $D = 5{,}000$, where it spends 93.7\%, the backfill reaches
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=50].pred_savings_linear = 93.75
+body.tex:1580  0.960
+    0.960 and lazy is 2.9 points \emph{behind}. Nothing in the design changed
+    -> 20261012-144200_migration_msmarco_8m_dseed3__migration.jso  frontier[kprime=500].recall_on_d_subset = 0.9595
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=1000].reached = 0.9603
+    -> 20261014-104501_step2_load_t1__step2.json  runs[kprime=500].recall_e2e_by_decile[0] = 0.96
+    -> 20261014-110054_step2_load_t4__step2.json  runs[kprime=500].recall_e2e_by_decile[0] = 0.96
+body.tex:1588  93.7
+    not: at 93.7\% reached there is little left to order and little left to repair,
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=50].pred_savings_linear = 93.75
+body.tex:1605  93.7
+    59.7\% of the corpus against lazy's 93.7\% and still reaches only 0.545 against
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=50].pred_savings_linear = 93.75
+body.tex:1643  0.1
+    corpus, and a few hundred queries reach almost all of it. Savings are 0.1\% at
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].reached = 0.001
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].x_dk_over_n = 0.001
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].recall_on_d_subset_sd = 0.0013
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=50].recall_on_d_subset_sd = 0.0014
+body.tex:1645  19
+    migration costs 18--19\% \emph{more} GPU than a batch re-embed. The design
+    -> 20261014-104501_step2_load_t1__step2.json  boundary_ties.500 = 19.0
+    -> 20261014-110054_step2_load_t4__step2.json  boundary_ties.500 = 19.0
+    -> 20261014-111235_step2_load_t8__step2.json  boundary_ties.500 = 19.0
+    -> 20261016-094835_chain_synthetic_traffic__chain.json  sweeps[0].rows[kprime=1000].eval_passes_marginal_pct = 19.43
+body.tex:1649  13.9
+    faster than the budget does. Net savings are 13.9\% at $D = 3{,}000$, where
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[2].rows[kprime=2000].eval_passes_marginal_pct = 13.85
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[1].rows[kprime=8000].eval_passes_marginal_pct = 13.92
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[2].rows[kprime=2000].eval_passes_marginal_pct = 13.85
+body.tex:1650  2.0
+    $\rho = 0.863$, and 2.0\% at all 6,980 dev intents; the closed form places the
+    -> 20261013-160555_n_ladder_msmarco__n_ladder.json  frontier[kprime=200].x_dk_over_n = 2.0
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=1000].x_dk_over_n = 2.0
+    -> 20261015-223042_chain_synthetic_traffic__chain.json  sweeps[0].meta.legs[leg=2].leg = 2.0
+    -> 20261015-223042_chain_synthetic_traffic__chain.json  sweeps[0].meta.legs[leg=2].sources_while_serving = 2.0
+appendix.tex:66  30
+    30\% of the rows in 100 sampled windows left them at 357 of 500 rows on
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[0].ms_per_unit_series[2][0] = 30.0
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[1].ms_per_unit_series[2][0] = 30.0
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  phases[2].ms_per_unit_series[2][0] = 30.0
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=200].pred_savings_indep = 30.11
+appendix.tex:69  92.8
+    $\mathit{ef}_{\mathrm{construction}} = 64$) contains 92.8\%, 94.0\% and
+    -> 20261017-003632_tab_form_rows__tab_form.json  rows[N=212876].residuals[kprime=500].measured_pct = 92.7643
+    -> 20261017-004939_backfill_rate_b16_tokensort_idle__backfill  phases[1].gpu.util_mean = 92.8
+appendix.tex:69  94.0
+    $\mathit{ef}_{\mathrm{construction}} = 64$) contains 92.8\%, 94.0\% and
+    -> 20261013-165911_migration_msmarco_500k_bsl__migration.json  frontier[kprime=10].pred_savings_linear = 94.0
+    -> 20261016-023333_chain_synthetic_traffic__chain.json  sweeps[0].meta.legs[policy=original-only].cumulative = 94.0
+    -> 20261016-023333_chain_synthetic_traffic__chain.json  sweeps[0].rows[kprime=500].cumulative_encoded_pct = 94.0
+    -> 20261016-023703_chain_synthetic_depth_control__chain.json  sweeps[0].meta.legs[policy=original-only].cumulative = 94.0
+appendix.tex:70  94.5
+    94.5\% of the exact window at $K' = 200$, 500 and 1000. That is the old
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].pred_savings_indep = 94.55
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].pred_savings_exp = 94.55
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=100].pred_savings_indep = 94.55
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=100].pred_savings_exp = 94.55
+appendix.tex:74  0.0108
+    costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+    -> 20261017-010914_backfill_rate_b16_tokensort_pgload__backfi  phases[0].copy_ms_per_unit = 0.0108
+    -> 20261017-010914_backfill_rate_b16_tokensort_pgload__backfi  phases[1].copy_ms_per_unit = 0.0108
+appendix.tex:74  0.0110
+    costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].reached = 0.011
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=20].reached = 0.011
+    -> 20261012-144200_migration_msmarco_8m_dseed3__migration.jso  frontier[kprime=20].reached = 0.011
+    -> 20261012-145054_migration_msmarco_8m_dseed4__migration.jso  frontier[kprime=20].reached = 0.011
+appendix.tex:74  0.0100
+    costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=50].x_dk_over_n = 0.01
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=100].x_dk_over_n = 0.01
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=50].x_dk_over_n = 0.01
+    -> 20261012-143400_migration_msmarco_8m_dseed2__migration.jso  frontier[kprime=100].x_dk_over_n = 0.01
+appendix.tex:75  0.928
+    and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+    -> 20261012-144200_migration_msmarco_8m_dseed3__migration.jso  frontier[kprime=200].recall_on_d_subset = 0.9284
+    -> 20261016-094733_drift_sweep__drift_sweep.json  rows[0].one_generation_recall = 0.9283
+    -> 20261016-094733_drift_sweep__drift_sweep.json  rows[1].one_generation_recall = 0.9283
+    -> 20261016-094733_drift_sweep__drift_sweep.json  rows[2].one_generation_recall = 0.9283
+appendix.tex:75  0.940
+    and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+    -> 20261016-094733_drift_sweep__drift_sweep.json  rows[4].nearest_last = 0.94
+    -> 20261017-150605_estimate_cipbench_dense__estimate.json  estimates[kprime=50].curve_reached[18] = 0.939983
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[2].rows[kprime=4000].recall_candidates = 0.94
+    -> 20261017-184214_chain_real_deep__chain.json  sweeps[2].rows[kprime=4000].recall_at_k = 0.94
+appendix.tex:75  0.945
+    and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+    -> 20261012-132839_backfill_rate_b64_pgload__backfill_rate.js  result.factors.forward_share_of_repair_time = 0.9455
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=500].recall_candidates = 0.9447
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=500].recall_at_k = 0.9447
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[1].rows[kprime=500].recall_candidates = 0.9447
+appendix.tex:81  0.0010
+    latency $0.5$ against $1.4$\,s --- at a cost of $0.0010$ end-to-end recall, so
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].reached = 0.001
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=10].x_dk_over_n = 0.001
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=2000].recall_on_d_subset_sd = 0.001
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=2000].reached_sd = 0.001
+appendix.tex:161  0.0002
+    fraction of the query set gives $x = 0.0002$ on one corpus and $3$ on another,
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=20].recall_on_d_subset_sd = 0.0002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=500].reached_sd = 0.0002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=500].reached_sd = 0.0002
+    -> 20261012-113252_migration_msmarco_8m_dseed1__migration.jso  frontier[kprime=1000].reached_sd = 0.0002
+appendix.tex:174  1.013
+    encoder's best batch --- gives $1.013\times$, an upper bound, because a
+    -> 20261013-191607_backfill_rate_b16_pgload__backfill_rate.js  result.factors.which_units_tokens_per_unit = 1.0134
+    -> 20261017-020753_backfill_rate_b64_tokensort_idle__backfill  result.backfill_drift_B_over_A = 1.0131
+    -> 20261017-020753_backfill_rate_b64_tokensort_idle__backfill  result.factors.forward_penalty = 1.0129
+appendix.tex:181  18
+    times larger, whose padding is $18\%$ worse, it is $0.898$.
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=1000].eval_passes_marginal_pct = 18.29
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].passes_pct = 17.71
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=1000].eval_passes_marginal_pct = 18.4
+    -> 20261017-000011_chain_real_rho3__chain.json  sweeps[0].rows[kprime=2000].passes_pct = 17.64
+appendix.tex:249  1.016
+    at 8 (4.05\,ms per item), with chunks of 16 costing $1.016\times$ that and
+    -> 20261017-010914_backfill_rate_b16_tokensort_pgload__backfi  result.factors.which_units_tokens_per_unit = 1.0158
+
+=== NO home anywhere ===
+  body.tex:1167  0.9944  stream rises from 0.874 to 0.980 and the top-1 hit rate from 0.9944 to 0.9974,
+  body.tex:1167  0.9974  stream rises from 0.874 to 0.980 and the top-1 hit rate from 0.9944 to 0.9974,
+  body.tex:1168  0.905  while the first decile moves only from 0.896 to 0.905 --- the earliest queries
+  body.tex:1366  1.244  chunks of 4 cost $1.244\times$, so the curve is a shallow basin and steep on
+  body.tex:1382  3.772  16 (fastest) & 3.780 & 3.772 & $\mathbf{0.998}$ \\
+  body.tex:1383  3.897  32           & 3.897 & 3.785 & $0.972$ \\
+  body.tex:1384  4.218  64           & 4.218 & 3.788 & $0.898$ \\
+  body.tex:1384  3.788  64           & 4.218 & 3.788 & $0.898$ \\
+  body.tex:1393  1.017  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1393  0.154  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1393  0.115  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1403  1.017  $1.017 \to 1.021$) and the penalty goes $0.898 \to 0.917$ at the backfill batch
+  body.tex:1537  0.494  stale (no migration)       & 0.494 & 0.510 \\
+  body.tex:1539  0.290  backfill, corpus order     & 0.290 & 0.935 \\
+  body.tex:1540  0.353  backfill, traffic order    & 0.353 & \textbf{0.960} \\
+  body.tex:1578  0.353  where lazy spends 31\% of the corpus, the best backfill reaches 0.353 against
+  body.tex:1597  0.290  (0.290 against 0.314; 0.935 against 0.936), and is nominally worse at both.
+  appendix.tex:250  1.119  chunks of 32 $1.119\times$, while going \emph{smaller} is worse than going
+  appendix.tex:251  1.244  moderately larger --- chunks of 4 cost $1.244\times$. The curve is a shallow

@@ -1,0 +1,13 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus dpr_wiki --limit 449071 --dpr-path D:/SemView/semview_v14/wiki_dpr_clean --dpr-variant psgs_w100.nq.no_index --old dpr:psgs_w100.nq.no_index --kprimes 500 --out D:\SemView\thaw-1017\results\runs\20261017-173836_estimate_dpr_dense_clean2/estimate.json
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. 
+The tokenizer class you load from this checkpoint is 'DPRQuestionEncoderTokenizer'. 
+The class this function is called from is 'DPRContextEncoderTokenizer'.
+Some weights of the model checkpoint at facebook/dpr-ctx_encoder-single-nq-base were not used when initializing DPRContextEncoder: ['ctx_encoder.bert_model.pooler.dense.bias', 'ctx_encoder.bert_model.pooler.dense.weight']
+- This IS expected if you are initializing DPRContextEncoder from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing DPRContextEncoder from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+DPR provenance check failed; aborting
+building a gold+distractor subset: 47,461 gold passages + 401,610 uniform distractors, from one pass over all 21,015,300 rows
+  5,624 gold passages found; 2,180 of 6,515 questions have an answer in the subset
+DPR provenance: mean cos 0.9312, min 0.6740 over 256 passages -> MISMATCH: do not trust downstream numbers
+
+[exit 1 after 866 s]

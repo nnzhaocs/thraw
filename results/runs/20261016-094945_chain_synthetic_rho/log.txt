@@ -1,0 +1,46 @@
+$ python analysis/chain.py --synthetic --legs 4 --eval-queries 150 --rho 0.4 --kprimes 500,1000 --out /home/claude/chain_review/thaw/results/runs/20261016-094945_chain_synthetic_rho/chain.json
+  calibrated alpha=0.3450 at N=200,000, K'=500, drift=independent: one generation gives 0.9293 against the target 0.929
+
+  N=200,000  4 legs  k=10  rho target 40% per leg  150 evaluation queries (load x=0.75)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  40.0%  40.0%  40.1%  40.1%  40.1%  40.1%  40.2%  40.3%   cumulative encode  160.7% of N   (204q 203q 205q 206q 102q 102q 103q 103q)
+    union-nearest    reached  40.0%  40.1%  40.0%  40.2%  40.1%  40.3%  40.5%  40.2%   cumulative encode  161.1% of N   (204q 126q 124q 123q 102q 64q 64q 62q)
+    union-all        reached  40.0%  40.1%  40.0%  40.3%  40.1%  40.3%  40.6%  40.4%   cumulative encode  161.4% of N   (204q 126q 95q 77q 102q 64q 50q 39q)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.925       0.857       0.759       0.642
+  previous-only              -       0.412       0.399       0.401
+  union-nearest              -       0.922       0.853       0.768
+  union-all                  -       0.922       0.887       0.852
+  passes, % of N          0.0%       45.1%       53.8%       60.1%   (union-all)
+
+  K'=1000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.974       0.924       0.849       0.735
+  previous-only              -       0.420       0.413       0.413
+  union-nearest              -       0.957       0.907       0.839
+  union-all                  -       0.957       0.926       0.889
+  passes, % of N          0.0%       66.9%       74.3%       79.0%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain: total = warm-up over 4 legs + what the evaluation adds
+  policy              K‘   warm-up    +eval     total   % of N   recall
+  ----------------------------------------------------------------------
+  previous-only      500   320,737   17,839   338,576   169.3%    0.401
+  previous-only     1000   322,187   25,824   348,011   174.0%    0.413
+  original-only      500   320,446   37,552   357,998   179.0%    0.642
+  union-nearest      500   320,737   48,151   368,888   184.4%    0.768
+  union-all          500   320,887   63,177   384,064   192.0%    0.852
+  original-only     1000   321,368   63,146   384,514   192.3%    0.735
+  union-nearest     1000   322,187   73,978   396,165   198.1%    0.839
+  union-all         1000   322,733   87,187   409,920   205.0%    0.889
+
+  matched on total passes: union-nearest at K'=500 serves 0.768 for 184.4% of N,
+  against original-only at K'=1000 serving 0.735 for 192.3%.
+wrote /home/claude/chain_review/thaw/results/runs/20261016-094945_chain_synthetic_rho/chain.json (28,367 bytes, sha256 4e3b2be13591)
+
+wrote /home/claude/chain_review/thaw/results/runs/20261016-094945_chain_synthetic_rho/chain.json
+
+[exit 0 after 60 s]

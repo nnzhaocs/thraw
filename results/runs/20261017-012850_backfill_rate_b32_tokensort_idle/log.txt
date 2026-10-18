@@ -1,0 +1,26 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m thaw_pg backfill-rate --enc local:BAAI/bge-base-en-v1.5 --kprime 500 --chunk 16 --backfill-batch 32 --pg-load 0 --warmup 180 --out D:\SemView\thaw-r18\results\runs\20261017-012850_backfill_rate_b32_tokensort_idle/backfill_rate.json
+D:\SemView\thaw-r18\thaw_pg\encoders.py:103: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.m.get_sentence_embedding_dimension()
+The `tokenize` method is deprecated, please use `preprocess` instead.
+repair stream: exact old-space top-500 for 5000 queries over N=500,000
+  468,670 repairs in the stream (93.7% of the corpus)
+warm-up 180s ...
+backfill_A: up to 300s ...
+  103,040 units  2.899 ms/unit (tok 0.108, fwd 2.785)  tokens/unit 75.97  padding 1.0056
+repair: up to 300s ...
+  94,735 units  3.142 ms/unit (tok 0.147, fwd 2.985)  tokens/unit 76.94  padding 1.0412
+backfill_B: up to 300s ...
+  103,264 units  2.892 ms/unit (tok 0.108, fwd 2.778)  tokens/unit 76.27  padding 1.0052
+
+======================================================================
+penalty (repair : backfill, sustained)  1.0853
+penalty (first 10 s)                    1.5673
+backfill drift B/A                      0.9976
+  which units (tokens/unit)             1.0108
+  batching (padding)                    1.0356
+  device (fwd ms per padded token)      1.0251
+  tokenize ms/unit repair vs backfill   0.1473 vs 0.1082
+break-even reached fraction             0.9214
+wrote D:\SemView\thaw-r18\results\runs\20261017-012850_backfill_rate_b32_tokensort_idle\backfill_rate.json (9,644 bytes, sha256 04fb23cb4509)
+
+[exit 0 after 1159 s]

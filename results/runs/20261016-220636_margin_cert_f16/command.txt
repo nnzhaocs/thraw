@@ -1,0 +1,1 @@
+C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/margin_cert.py --old _local/opsafe_sample/bge_3k.npy --new _local/opsafe_sample/bge_3k_f16.npy --new-f16 --queries 500 --k 10 --label bge-base f32 vs f16 certificate --out D:\SemView\thaw-r18\results\runs\20261016-220636_margin_cert_f16/margin_cert.json

@@ -1,0 +1,19 @@
+$ /root/miniconda3/bin/python analysis/scaling_mechanism.py --v-new cache/555c0c6032336a208fbb259eb16cbb59.f16.npy --q-new /root/autodl-tmp/thaw/results/runs/20261013-155733_msmarco_8m_dumpq/arrays/q_new.npy --sizes 500000,2000000,4000000,8841823 --k 10 --queries 1000 --band 0.01 --seed 0 --out /root/thaw-r18/results/runs/20261017-210558_scaling_mechanism/scaling_mechanism.json
+  N=500,000 ...
+    k-th score 0.6382  z 6.17   band 5.0 docs (9.95e-06 of N)   dup pairs/query 0.03
+  N=2,000,000 ...
+    k-th score 0.6812  z 6.99   band 4.8 docs (2.41e-06 of N)   dup pairs/query 0.19
+  N=4,000,000 ...
+    k-th score 0.7034  z 7.42   band 5.1 docs (1.28e-06 of N)   dup pairs/query 0.36
+  N=8,841,823 ...
+    k-th score 0.7286  z 7.91   band 5.5 docs (6.28e-07 of N)   dup pairs/query 0.76
+
+  H1 wants: the k-th score's z rises AND the band thins.
+  H2 warns:  duplicate pairs per query rise with N.
+
+  H2: near-duplicate density in the top-k rises with N, so part of the recall gain is MS MARCO's composition. Report it as such before building on the scaling result. H2 wins even when H1's signals also look good: a real confound is not cancelled by a real mechanism. NOTE: the trend is not monotone across all sizes, so this is a first-to-last comparison and not a scaling law.
+wrote /root/thaw-r18/results/runs/20261017-210558_scaling_mechanism/scaling_mechanism.json (4,129 bytes, sha256 7221aeb2c8e2)
+
+wrote /root/thaw-r18/results/runs/20261017-210558_scaling_mechanism/scaling_mechanism.json
+
+[exit 0 after 501 s]

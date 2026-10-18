@@ -1,0 +1,275 @@
+{
+  "tool": "gen2_union",
+  "k": 10,
+  "kprimes": [
+    200,
+    500,
+    1000,
+    2000
+  ],
+  "warm_frac": 0.9,
+  "inputs": {
+    "v_old": "cache/2aa13438bd13a33c3e6705a785ecfcc2.npy",
+    "v_mid": "cache/8256b4ed43559037dee7d45f28746869.npy",
+    "v_new": "cache/5d103cb11869f81b2b5023901a9fc385.f16.npy",
+    "q_old": "results/runs/20261013-212259_msmarco_500k_dump/arrays/q_old.npy",
+    "q_mid": "results/runs/20261013-213357_msmarco_500k_dumpmid/arrays/q_old.npy",
+    "q_new": "results/runs/20261013-212259_msmarco_500k_dump/arrays/q_new.npy"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "host": "autodl-container-db014fb565-5b7e53de",
+    "argv": [
+      "analysis/gen2_union.py",
+      "--v-old",
+      "cache/2aa13438bd13a33c3e6705a785ecfcc2.npy",
+      "--v-mid",
+      "cache/8256b4ed43559037dee7d45f28746869.npy",
+      "--v-new",
+      "cache/5d103cb11869f81b2b5023901a9fc385.f16.npy",
+      "--q-old",
+      "results/runs/20261013-212259_msmarco_500k_dump/arrays/q_old.npy",
+      "--q-mid",
+      "results/runs/20261013-213357_msmarco_500k_dumpmid/arrays/q_old.npy",
+      "--q-new",
+      "results/runs/20261013-212259_msmarco_500k_dump/arrays/q_new.npy",
+      "--k",
+      "10",
+      "--kprimes",
+      "200,500,1000,2000",
+      "--warm-frac",
+      "0.9",
+      "--out",
+      "/root/autodl-tmp/thaw/results/runs/20261013-213943_gen2_union_msmarco/gen2_union.json"
+    ],
+    "dtype": "float16",
+    "device": null,
+    "numpy": "2.3.2",
+    "torch": "2.8.0+cu128",
+    "sentence_transformers": "6.1.0",
+    "transformers": "5.19.0",
+    "faiss": "1.15.1",
+    "psycopg": null,
+    "gpu": "NVIDIA GeForce RTX 4090 D",
+    "cuda": "12.8"
+  },
+  "fingerprint": {
+    "old_head": "0bddf536d92c9b78",
+    "mid_head": "9fdf0a6cbb078011",
+    "new_head": "d3e3d6eb275aae1e",
+    "old_strided": "69557f51d74833d5",
+    "mid_strided": "5cec68b09f2afb97",
+    "new_strided": "1d10c1aee595db56",
+    "new_storage_dtype": "float16"
+  },
+  "coverage": {
+    "R1": 497955,
+    "N": 500000,
+    "passes_leg1": 497955,
+    "kprimes": [
+      200,
+      500,
+      1000,
+      2000
+    ]
+  },
+  "schemes": [
+    {
+      "scheme": "old-only",
+      "kprime": 200,
+      "passes": 85889,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 85889,
+      "recall_candidates": 0.8742000000000001,
+      "recall_at_k": 0.8742000000000001,
+      "note": "candidates from the original index: the design read literally"
+    },
+    {
+      "scheme": "mid-only",
+      "kprime": 200,
+      "passes": 84346,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 84346,
+      "recall_candidates": 0.9292,
+      "recall_at_k": 0.9292,
+      "note": "the intermediate index alone, restricted to what leg 1 reached"
+    },
+    {
+      "scheme": "union",
+      "kprime": 200,
+      "passes": 125780,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 125780,
+      "recall_candidates": 0.9532,
+      "recall_at_k": 0.9532,
+      "note": "old K' plus mid K' inside R1; the mid list costs no forward pass, only the extra units leg 2 must then encode"
+    },
+    {
+      "scheme": "union-open",
+      "kprime": 200,
+      "passes": 125857,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 125857,
+      "recall_candidates": 0.9536,
+      "recall_at_k": 0.9536,
+      "note": "the same union with the mid list unrestricted: what restricting it to R1 costs"
+    },
+    {
+      "scheme": "old-only",
+      "kprime": 500,
+      "passes": 180647,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 180647,
+      "recall_candidates": 0.9212,
+      "recall_at_k": 0.9212,
+      "note": "candidates from the original index: the design read literally"
+    },
+    {
+      "scheme": "mid-only",
+      "kprime": 500,
+      "passes": 173934,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 173934,
+      "recall_candidates": 0.961,
+      "recall_at_k": 0.961,
+      "note": "the intermediate index alone, restricted to what leg 1 reached"
+    },
+    {
+      "scheme": "union",
+      "kprime": 500,
+      "passes": 244577,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 244577,
+      "recall_candidates": 0.9755999999999999,
+      "recall_at_k": 0.9755999999999999,
+      "note": "old K' plus mid K' inside R1; the mid list costs no forward pass, only the extra units leg 2 must then encode"
+    },
+    {
+      "scheme": "union-open",
+      "kprime": 500,
+      "passes": 244730,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 244730,
+      "recall_candidates": 0.9755999999999999,
+      "recall_at_k": 0.9755999999999999,
+      "note": "the same union with the mid list unrestricted: what restricting it to R1 costs"
+    },
+    {
+      "scheme": "old-only",
+      "kprime": 1000,
+      "passes": 284119,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 284119,
+      "recall_candidates": 0.9478000000000001,
+      "recall_at_k": 0.9478000000000001,
+      "note": "candidates from the original index: the design read literally"
+    },
+    {
+      "scheme": "mid-only",
+      "kprime": 1000,
+      "passes": 269962,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 269962,
+      "recall_candidates": 0.9746,
+      "recall_at_k": 0.9746,
+      "note": "the intermediate index alone, restricted to what leg 1 reached"
+    },
+    {
+      "scheme": "union",
+      "kprime": 1000,
+      "passes": 352122,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 352122,
+      "recall_candidates": 0.9854,
+      "recall_at_k": 0.9854,
+      "note": "old K' plus mid K' inside R1; the mid list costs no forward pass, only the extra units leg 2 must then encode"
+    },
+    {
+      "scheme": "union-open",
+      "kprime": 1000,
+      "passes": 352430,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 352430,
+      "recall_candidates": 0.9854,
+      "recall_at_k": 0.9854,
+      "note": "the same union with the mid list unrestricted: what restricting it to R1 costs"
+    },
+    {
+      "scheme": "old-only",
+      "kprime": 2000,
+      "passes": 390652,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 390652,
+      "recall_candidates": 0.9672000000000001,
+      "recall_at_k": 0.9672000000000001,
+      "note": "candidates from the original index: the design read literally"
+    },
+    {
+      "scheme": "mid-only",
+      "kprime": 2000,
+      "passes": 370148,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 370148,
+      "recall_candidates": 0.985,
+      "recall_at_k": 0.985,
+      "note": "the intermediate index alone, restricted to what leg 1 reached"
+    },
+    {
+      "scheme": "union",
+      "kprime": 2000,
+      "passes": 439131,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 439131,
+      "recall_candidates": 0.9928,
+      "recall_at_k": 0.9928,
+      "note": "old K' plus mid K' inside R1; the mid list costs no forward pass, only the extra units leg 2 must then encode"
+    },
+    {
+      "scheme": "union-open",
+      "kprime": 2000,
+      "passes": 439647,
+      "passes_leg1": 497955,
+      "passes_train": 0,
+      "passes_serve": 439647,
+      "recall_candidates": 0.9928,
+      "recall_at_k": 0.9928,
+      "note": "the same union with the mid list unrestricted: what restricting it to R1 costs"
+    },
+    {
+      "scheme": "diagnostics",
+      "kprime": 1000,
+      "passes": 0,
+      "passes_train": 0,
+      "passes_serve": 0,
+      "recall_candidates": null,
+      "recall_at_k": null,
+      "note": "at K'=1000, per query: truth only in the mid list 0.38, only in old 0.11, in both 9.37, in neither 0.15"
+    },
+    {
+      "scheme": "coverage",
+      "kprime": 1000,
+      "passes": 497955,
+      "passes_train": 0,
+      "passes_serve": 497955,
+      "recall_candidates": null,
+      "recall_at_k": null,
+      "note": "leg 1 reached 497,955 of 500,000 (99.6%), which is all the mid index can ever nominate"
+    }
+  ]
+}

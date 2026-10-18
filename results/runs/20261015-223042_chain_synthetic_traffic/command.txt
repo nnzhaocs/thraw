@@ -1,0 +1,1 @@
+python3 analysis/chain.py --synthetic --legs 4 --kprimes 500 --queries-per-leg 150 --out /tmp/claude-0/sub/thaw/results/runs/20261015-223042_chain_synthetic_traffic/chain.json

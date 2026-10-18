@@ -1,0 +1,83 @@
+ambiguous rows: 41
+body.tex:55  60       CHAIN-REACH-L4|ESTIMATE-MEAS-FIQA
+    serving $10^4$ distinct intents a month leaves about 60\% untouched
+body.tex:109  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    MiniLM to BGE, cross-space recall is $0.929$ at $K' = 500$, and $43\%$ of the
+body.tex:751  78       LADDER-2M-50|LADDER-8M-S
+    $DK'/N = 0.25$, so 78\% of the corpus is never re-embedded. At the measured
+body.tex:789  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    \emph{worse}: 0.697 against 0.929 at $K' = 500$
+body.tex:1017  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    MiniLM $\to$ BGE      & 0.768 & 0.883 & \textbf{0.929} & 0.953 & 0.970 \\
+body.tex:1017  0.953    DIST-MINILM-1000|GEN2-UNION-200|PG-EFCAP-ITER
+    MiniLM $\to$ BGE      & 0.768 & 0.883 & \textbf{0.929} & 0.953 & 0.970 \\
+body.tex:1018  0.930    DIST-DPR-2000|LADDER-MINILM-500|PG-OVERLAP-200|PG-VACUUM-POST
+    DPR $\to$ BGE         & 0.606 & 0.762 & 0.842 & 0.891 & \textbf{0.930} \\
+body.tex:1019  0.942    BREAKEVEN-B16-TOKENSORT|DIST-FIQA-500
+    FiQA, out of domain   & 0.682 & 0.871 & 0.942 & 0.971 & 0.987 \\
+body.tex:1031  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    $K' = 500$, one thousandth of the corpus, retains 0.929 of the new model's
+body.tex:1032  0.942    BREAKEVEN-B16-TOKENSORT|DIST-FIQA-500
+    ranking. Second, \textbf{out-of-domain recall does not collapse}: FiQA reaches 0.942,
+body.tex:1040  0.930    DIST-DPR-2000|LADDER-MINILM-500|PG-OVERLAP-200|PG-VACUUM-POST
+    0.930 --- four times the depth MiniLM $\rightarrow$ BGE needs, and therefore
+body.tex:1045  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    corpus moves almost nothing: MiniLM $\rightarrow$ BGE gives 0.929 on MS~MARCO
+body.tex:1058  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    \texttt{all-MiniLM-L6-v2}    & 0.768 & 0.883 & 0.929 & 500 \\
+body.tex:1068  0.9295   LADDER-MINILM-500|PG-OVERLAP-200
+    than 0.93 because two pairs land on 0.9295 and 0.9298, so a bar between them
+body.tex:1095  0.895    ESTIMATE-PRED-FIQA|LADDER-2M-200
+    200 & 0.864 & 0.895 & 0.912 & 0.931 \\
+body.tex:1095  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    200 & 0.864 & 0.895 & 0.912 & 0.931 \\
+body.tex:1096  0.936    CMP-BF-RANDOM|CONC-RECALL|LADDER-2M-500
+    500 & 0.916 & 0.936 & 0.949 & \textbf{0.962} \\
+body.tex:1096  0.962    CMP-BF-TRAFFIC|LADDER-8M-FULL|LADDER-8M-R|STEP2-DECILE-MAX
+    500 & 0.916 & 0.936 & 0.949 & \textbf{0.962} \\
+body.tex:1109  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    0.916 against that table's 0.929 because the two 500k subsets are not the same
+body.tex:1139  0.9295   LADDER-MINILM-500|PG-OVERLAP-200
+    index, not of $D$ (on MS~MARCO, 0.9295 at $K' = 500$). Only savings move with
+body.tex:1163  0.9295   LADDER-MINILM-500|PG-OVERLAP-200
+    against the base design's 0.9295 at $K' = 500$: the same quality from a window
+body.tex:1175  0.9364   CONC-RECALL|LADDER-2M-500
+    0.9364 at $K' = 500$, and does not reach it. The two measurements are the same
+body.tex:1181  0.9364   CONC-RECALL|LADDER-2M-500
+    case an operator will hear about. The 0.9364 is an average over 500 queries;
+body.tex:1184  0.962    CMP-BF-TRAFFIC|LADDER-8M-FULL|LADDER-8M-R|STEP2-DECILE-MAX
+    small --- every decile of the stream falls between $0.908$ and $0.962$ --- so
+body.tex:1240  0.895    ESTIMATE-PRED-FIQA|LADDER-2M-200
+    original index only      & 0.977 & 0.961 & 0.895 & \textbf{0.848} & 173.1 \\
+body.tex:1243  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    original + all partial   & --- & 0.973 & 0.931 & \textbf{0.896} & 180.8 \\
+body.tex:1278  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    serves 0.943 for 203.9\% of $N$ against the literal design's 0.931 for 210.0\%:
+body.tex:1279  60       CHAIN-REACH-L4|ESTIMATE-MEAS-FIQA
+    \textbf{+0.012}. At 60\% reach the margin reaches +0.024. \textbf{At 20\% reach
+body.tex:1280  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    there is no win at any depth}: the literal design at $K' = 8000$ serves 0.931
+body.tex:1479  8        FORM-DPR-MEAN|PG-LAT-500
+    8\%, the same order of conservatism at a load $2.5\times$ further out.
+body.tex:1494  60       CHAIN-REACH-L4|ESTIMATE-MEAS-FIQA
+    $x = 0.5$ and saves about 60\%, while a web search engine sits three orders of
+body.tex:1506  4        COST-UNIT-MS|MS-B16-BACKFILL|MS-B16-REPAIR|PG-LAT-200
+    $10^4$ & 0.96 &  4\% \\
+body.tex:1538  0.936    CMP-BF-RANDOM|CONC-RECALL|LADDER-2M-500
+    backfill, random order     & 0.314 & 0.936 \\
+body.tex:1542  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    \textbf{lazy (this paper)} & \textbf{0.934} & 0.931 \\
+body.tex:1565  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    0.998 while lazy reaches 0.931 is what repairing on demand, rather than unit
+body.tex:1572  0.9295   LADDER-MINILM-500|PG-OVERLAP-200
+    exceed the cross-space candidate recall of its window --- $0.9295$ at
+body.tex:1597  0.936    CMP-BF-RANDOM|CONC-RECALL|LADDER-2M-500
+    (0.290 against 0.314; 0.935 against 0.936), and is nominally worse at both.
+body.tex:1602  4        COST-UNIT-MS|MS-B16-BACKFILL|MS-B16-REPAIR|PG-LAT-200
+    Fitted on 4\% of the corpus, the map reaches 0.196 alone --- below even the
+body.tex:1604  0.929    LADDER-MINILM-500|PG-OVERLAP-200
+    generator against the raw old index's 0.929. Granted the same budget it spends
+body.tex:1606  0.931    CMP-LAZY|LADDER-8M-200|PG-VACUUM-POST
+    0.931: cheaper on the ledger and far behind, which is what makes it a negative
+appendix.tex:86  0.9364   CONC-RECALL|LADDER-2M-500
+    same 0.9364 end-to-end recall, every gate passing --- while total wall time falls

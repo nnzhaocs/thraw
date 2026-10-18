@@ -1,0 +1,1 @@
+python -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --old all-mpnet-base-v2 --new BAAI/bge-base-en-v1.5 --out pair_all-mpnet-base-v2.json

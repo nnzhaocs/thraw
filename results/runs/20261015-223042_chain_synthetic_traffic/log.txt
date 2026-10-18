@@ -1,0 +1,32 @@
+$ python3 analysis/chain.py --synthetic --legs 4 --kprimes 500 --queries-per-leg 150 --out /tmp/claude-0/sub/thaw/results/runs/20261015-223042_chain_synthetic_traffic/chain.json
+
+  N=200,000  4 legs  k=10  150 queries per leg  150 evaluation queries (load x=0.375)
+    leg 1: 150 queries over 1 source(s) reached 62,809 (31.4%)
+    leg 2: 150 queries over 2 source(s) reached 89,001 (44.5%)
+    leg 3: 150 queries over 3 source(s) reached 107,204 (53.6%)
+    leg 4: 150 queries over 4 source(s) reached 121,373 (60.7%)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.817       0.676       0.571       0.449
+  previous-only              -       0.303       0.427       0.523
+  union-nearest              -       0.771       0.759       0.735
+  union-all                  -       0.771       0.793       0.795
+  passes, % of N          0.0%       44.5%       53.5%       60.4%   (union-all)
+
+  at the last leg, every row, cheapest first (the control: an `original-only` row that spends the same passes)
+  policy              K‘    passes   % of N   recall
+  --------------------------------------------------
+  previous-only      500    51,607    25.8%    0.523
+  original-only      500    62,523    31.3%    0.449
+  union-nearest      500    94,695    47.4%    0.735
+  union-all          500   120,886    60.4%    0.795
+
+  The literal design's best at this leg is 0.449, at any depth measured.
+  union-nearest at K'=500 reaches 0.735 for 47.4% of N.
+wrote /tmp/claude-0/sub/thaw/results/runs/20261015-223042_chain_synthetic_traffic/chain.json (7,449 bytes, sha256 bfe11b2f24ee)
+
+wrote /tmp/claude-0/sub/thaw/results/runs/20261015-223042_chain_synthetic_traffic/chain.json
+
+[exit 0 after 13 s]

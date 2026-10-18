@@ -1,0 +1,29 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --old sentence-transformers/all-MiniLM-L6-v2 --new BAAI/bge-small-en-v1.5 --cache-dir cache/ --dump-queries dump/leg0 --out D:\SemView\thaw-1017\results\runs\20261017-151022_chain_local_leg0/migration.json
+corpus=beir  N=500000  D=5000
+old model: sentence-transformers/all-MiniLM-L6-v2
+prefixes  old: query='' passage=''   new: query='Represent this sentence for searching relevant passages: ' passage=''
+  corpus embeddings from cache 2aa13438bd13a33c3e6705a785ecfcc2.npy
+new model: BAAI/bge-small-en-v1.5
+  encoded 100,000 / 500,000
+  encoded 200,000 / 500,000
+  encoded 300,000 / 500,000
+  encoded 400,000 / 500,000
+  encoded 500,000 / 500,000
+dumped query vectors to dump\leg0: q_old (5000, 384) float32, q_new (5000, 384) float32
+load x = D*K'/N at K'=500: 5   (none in the informative range 0.05-3)
+
+     K  recall@K   sav%@D=5000
+------------------------------
+    10     0.524          90.9
+    20     0.664          83.2
+    50     0.790          65.0
+   100     0.855          45.2
+   200     0.902          24.4
+   500     0.946           6.3
+  1000     0.966           1.5
+  2000     0.979           0.3
+
+full recomputation would embed 500,000 units
+wrote D:\SemView\thaw-1017\results\runs\20261017-151022_chain_local_leg0\migration.json (83,170 bytes, sha256 b0903be398b0)
+
+[exit 0 after 861 s]

@@ -1,0 +1,308 @@
+{
+  "server": {
+    "postgres": "18.1",
+    "pgvector": "0.8.5",
+    "shared_buffers": "4GB",
+    "maintenance_work_mem": "2GB",
+    "max_parallel_maintenance_workers": "7"
+  },
+  "source": "msmarco",
+  "N": 500000,
+  "queries_available": 5000,
+  "index_use": {
+    "old_window_uses_old_hnsw": {
+      "indexes_in_plan": [
+        "docs_emb_old_hnsw"
+      ],
+      "expected": "docs_emb_old_hnsw",
+      "expect_used": true,
+      "chosen_by_planner": true,
+      "capable": true,
+      "gate": "chosen",
+      "ok": true
+    },
+    "post_switch_uses_partial_hnsw": {
+      "indexes_in_plan": [
+        "docs_new_write_hnsw"
+      ],
+      "expected": "docs_new_write_hnsw",
+      "expect_used": true,
+      "chosen_by_planner": true,
+      "indexes_with_seqscan_off": [
+        "docs_new_write_hnsw"
+      ],
+      "capable": true,
+      "ok": true
+    },
+    "unfiltered_does_not_use_partial": {
+      "indexes_in_plan": [],
+      "expected": "docs_new_write_hnsw",
+      "expect_used": false,
+      "ok": true
+    },
+    "window_fetch_uses_pkey": {
+      "indexes_in_plan": [
+        "docs_new_pkey"
+      ],
+      "expected": "docs_new_pkey",
+      "expect_used": true,
+      "ok": true
+    },
+    "post_switch_query_ms": 0.2,
+    "pass": true
+  },
+  "depth": {
+    "ef_search_max": 1000,
+    "iterative_available": true,
+    "queries": 200,
+    "rows": [
+      {
+        "kprime": 200,
+        "mode": "plain",
+        "ef_search": 200,
+        "rows_min": 200,
+        "rows_mean": 200.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9295,
+        "p50_ms": 22.71,
+        "p99_ms": 122.35
+      },
+      {
+        "kprime": 200,
+        "mode": "relaxed",
+        "ef_search": 200,
+        "rows_min": 200,
+        "rows_mean": 200.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9295,
+        "p50_ms": 4.47,
+        "p99_ms": 7.38
+      },
+      {
+        "kprime": 200,
+        "mode": "strict",
+        "ef_search": 200,
+        "rows_min": 200,
+        "rows_mean": 200.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9295,
+        "p50_ms": 4.04,
+        "p99_ms": 6.65
+      },
+      {
+        "kprime": 500,
+        "mode": "plain",
+        "ef_search": 500,
+        "rows_min": 500,
+        "rows_mean": 500.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9407,
+        "p50_ms": 11.14,
+        "p99_ms": 20.72
+      },
+      {
+        "kprime": 500,
+        "mode": "relaxed",
+        "ef_search": 500,
+        "rows_min": 500,
+        "rows_mean": 500.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9407,
+        "p50_ms": 8.71,
+        "p99_ms": 14.18
+      },
+      {
+        "kprime": 500,
+        "mode": "strict",
+        "ef_search": 500,
+        "rows_min": 500,
+        "rows_mean": 500.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9407,
+        "p50_ms": 8.28,
+        "p99_ms": 13.64
+      },
+      {
+        "kprime": 1000,
+        "mode": "plain",
+        "ef_search": 1000,
+        "rows_min": 1000,
+        "rows_mean": 1000.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9465,
+        "p50_ms": 16.49,
+        "p99_ms": 24.86
+      },
+      {
+        "kprime": 1000,
+        "mode": "relaxed",
+        "ef_search": 1000,
+        "rows_min": 1000,
+        "rows_mean": 1000.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9465,
+        "p50_ms": 16.52,
+        "p99_ms": 26.53
+      },
+      {
+        "kprime": 1000,
+        "mode": "strict",
+        "ef_search": 1000,
+        "rows_min": 1000,
+        "rows_mean": 1000.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9465,
+        "p50_ms": 15.98,
+        "p99_ms": 24.99
+      },
+      {
+        "kprime": 2000,
+        "mode": "plain",
+        "ef_search": 1000,
+        "rows_min": 1000,
+        "rows_mean": 1000.1,
+        "full_window": false,
+        "overlap_with_exact": 0.5,
+        "p50_ms": 14.73,
+        "p99_ms": 22.71
+      },
+      {
+        "kprime": 2000,
+        "mode": "relaxed",
+        "ef_search": 1000,
+        "rows_min": 2000,
+        "rows_mean": 2000.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9527,
+        "p50_ms": 30.96,
+        "p99_ms": 48.61
+      },
+      {
+        "kprime": 2000,
+        "mode": "strict",
+        "ef_search": 1000,
+        "rows_min": 2000,
+        "rows_mean": 2000.0,
+        "full_window": true,
+        "overlap_with_exact": 0.9338,
+        "p50_ms": 41.29,
+        "p99_ms": 67.43
+      }
+    ],
+    "usable_mode_by_kprime": {
+      "200": "strict",
+      "500": "strict",
+      "1000": "strict",
+      "2000": "relaxed"
+    },
+    "min_overlap": 0.9,
+    "pass_": true,
+    "gated_kprimes": [
+      200,
+      500,
+      1000
+    ]
+  },
+  "updates": {
+    "kprime": 500,
+    "queries": 100,
+    "window_union": 47111,
+    "nulled": 14133,
+    "phases": {
+      "before_vacuum": {
+        "plain": {
+          "rows_min": 338,
+          "rows_mean": 359.3,
+          "full_window": false,
+          "nulled_rows_returned": 0,
+          "overlap_with_exact": 0.7163
+        },
+        "relaxed": {
+          "rows_min": 500,
+          "rows_mean": 500.0,
+          "full_window": true,
+          "nulled_rows_returned": 0,
+          "overlap_with_exact": 0.9659
+        }
+      },
+      "after_vacuum": {
+        "plain": {
+          "rows_min": 500,
+          "rows_mean": 500.0,
+          "full_window": true,
+          "nulled_rows_returned": 0,
+          "overlap_with_exact": 0.9305
+        },
+        "relaxed": {
+          "rows_min": 500,
+          "rows_mean": 500.0,
+          "full_window": true,
+          "nulled_rows_returned": 0,
+          "overlap_with_exact": 0.9305
+        }
+      }
+    },
+    "null_skip_pass": true,
+    "dead_tuples_pass": true,
+    "full_window_modes_before_vacuum": [
+      "relaxed"
+    ]
+  },
+  "claims": {
+    "windows": 200,
+    "tasks": 400,
+    "workers": 16,
+    "window_union": 87810,
+    "rows_done": 87810,
+    "rows_claimed_twice": 0,
+    "insert_conflicts": 0,
+    "waiter_timeouts": 0,
+    "errors": [],
+    "error_count": 0,
+    "claim_ms_p50": 2.35,
+    "claim_ms_p99": 5.71,
+    "wait_ms_p99": 177.73,
+    "elapsed_s": 3.69,
+    "lease_reclaimed": 100,
+    "lease_expected": 100,
+    "lease_live_claims_untouched": true,
+    "lease_pass": true,
+    "pass_": true
+  },
+  "gates": {
+    "1 index_use": true,
+    "2 depth (K' in [200, 500, 1000])": true,
+    "3 null_skip": true,
+    "4 dead_tuples": true,
+    "5 claims": true
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "D:\\SemView\\thaw-2026-10-11\\thaw_pg\\__main__.py",
+      "check",
+      "--kprimes",
+      "200,500,1000,2000",
+      "--queries",
+      "200",
+      "--claim-workers",
+      "16",
+      "--claim-windows",
+      "200",
+      "--out",
+      "D:\\SemView\\thaw-2026-10-11\\results\\runs\\20261014-040335_step1_check/step1_report.json"
+    ],
+    "dtype": null,
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

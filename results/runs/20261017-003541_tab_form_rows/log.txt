@@ -1,0 +1,17 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/tab_form.py MS MARCO=results/runs/20261013-165911_migration_msmarco_500k_bsl/migration.json DPR=results/runs/migration_dpr_490k_/migration_dpr_490k.json FiQA=results/runs/migration_fiqa_/migration_fiqa.json CIPBench=results/runs/migration_cipbench_/migration_cipbench.json ORCAS (real log)=results/runs/estimate_orcas_100k_/estimate_orcas_100k.json --out D:\SemView\thaw-r18\results\runs\20261017-003541_tab_form_rows/tab_form.json
+Traceback (most recent call last):
+  File "D:\SemView\thaw-r18\analysis\tab_form.py", line 130, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\SemView\thaw-r18\analysis\tab_form.py", line 82, in main
+    doc = json.loads(Path(path).read_text(encoding="utf-8"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results\\runs\\20261013-165911_migration_msmarco_500k_bsl\\migration.json'
+
+[exit 1 after 0 s]

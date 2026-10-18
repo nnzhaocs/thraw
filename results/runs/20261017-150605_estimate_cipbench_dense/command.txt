@@ -1,0 +1,1 @@
+C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus cipbench --path D:/SemView/thaw-2026-10-11/cipbench_root --old lexical:word --kprimes 10,50 --out D:\SemView\thaw-1017\results\runs\20261017-150605_estimate_cipbench_dense/estimate.json

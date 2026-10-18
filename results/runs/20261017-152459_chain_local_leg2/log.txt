@@ -1,0 +1,7 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.migration --corpus beir --beir-name msmarco --path beir/ --qrels-split dev --limit 500000 --max-queries 5000 --old BAAI/bge-base-en-v1.5 --new C:/Users/26240/.cache/modelscope/models/BAAI--bge-m3/snapshots/master --cache-dir cache/ --dump-queries dump/leg2 --out D:\SemView\thaw-1017\results\runs\20261017-152459_chain_local_leg2/migration.json
+corpus=beir  N=500000  D=5000
+old model: BAAI/bge-base-en-v1.5
+prefixes  old: query='Represent this sentence for searching relevant passages: ' passage=''   new: query='' passage=''
+  corpus embeddings from cache 5d103cb11869f81b2b5023901a9fc385.npy
+new model: C:/Users/26240/.cache/modelscope/models/BAAI--bge-m3/snapshots/master
+  encoded 100,000 / 500,000

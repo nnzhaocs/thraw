@@ -1,0 +1,17 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/operator_safety.py --old _local/opsafe_sample/minilm_3k.npy --new _local/opsafe_sample/bge_3k.npy --queries 500 --k 10 --label MiniLM -> bge-base (3k sample) --out D:\SemView\thaw-r18\results\runs\20261016-220554_opsafe_replace/operator_safety.json
+
+  MiniLM -> bge-base (3k sample)   dims 384 -> 768   N=2,500  B=1.372509
+    rho    mixed-index recall    threshold selected (vs true)
+    0.10   0.1636                  161.5 vs 1633.6  (90.1%)
+    0.25   0.2850                  397.4 vs 1633.6  (75.7%)
+    0.50   0.5146                  821.9 vs 1633.6  (49.7%)
+    0.75   0.7434                 1219.3 vs 1633.6  (25.4%)
+    0.90   0.9062                 1478.5 vs 1633.6  (9.5%)
+    -> the mixed index is destroyed for this pair, and the threshold operator
+       over-selects. C1's prohibition is measured here, not assumed.
+    (control) window-then-rerank returns the new model's own top-k at any rho, by construction: every comparison happens in the new space. Not scored, because a measurement of an identity is not evidence.
+wrote D:\SemView\thaw-r18\results\runs\20261016-220554_opsafe_replace\operator_safety.json (2,803 bytes, sha256 2c9e038e6fbe)
+
+wrote D:\SemView\thaw-r18\results\runs\20261016-220554_opsafe_replace/operator_safety.json
+
+[exit 0 after 11 s]

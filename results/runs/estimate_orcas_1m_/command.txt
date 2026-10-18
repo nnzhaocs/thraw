@@ -1,0 +1,1 @@
+python -m semview.estimate --corpus orcas --path beir/ --orcas-docs beir/msmarco/corpus.jsonl --old lexical:word --kprimes 200,500 --max-queries 1m --out estimate_orcas_1m.json

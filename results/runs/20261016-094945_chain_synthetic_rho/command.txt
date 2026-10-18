@@ -1,0 +1,1 @@
+python analysis/chain.py --synthetic --legs 4 --eval-queries 150 --rho 0.4 --kprimes 500,1000 --out /home/claude/chain_review/thaw/results/runs/20261016-094945_chain_synthetic_rho/chain.json

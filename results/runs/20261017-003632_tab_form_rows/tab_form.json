@@ -1,0 +1,548 @@
+{
+  "tool": "tab_form",
+  "x_range": [
+    0.05,
+    3.0
+  ],
+  "rows": [
+    {
+      "label": "MS MARCO",
+      "path": "evidence/20261013-165911_migration_msmarco_500k_bsl__migration.json",
+      "N": 500000,
+      "points": 18,
+      "mean": 2.8314353995450414,
+      "min": 0.04943718029686295,
+      "residuals": [
+        {
+          "kprime": 10,
+          "D": 3000,
+          "x": 0.06,
+          "measured_pct": 94.35,
+          "predicted_pct": 94.17639685181072,
+          "residual": 0.17360314818927236
+        },
+        {
+          "kprime": 20,
+          "D": 3000,
+          "x": 0.12,
+          "measured_pct": 89.24,
+          "predicted_pct": 88.69183080537928,
+          "residual": 0.5481691946207121
+        },
+        {
+          "kprime": 50,
+          "D": 1000,
+          "x": 0.1,
+          "measured_pct": 90.8,
+          "predicted_pct": 90.48328935585562,
+          "residual": 0.3167106441443792
+        },
+        {
+          "kprime": 50,
+          "D": 3000,
+          "x": 0.3,
+          "measured_pct": 76.22,
+          "predicted_pct": 74.0807107750911,
+          "residual": 2.139289224908893
+        },
+        {
+          "kprime": 100,
+          "D": 1000,
+          "x": 0.2,
+          "measured_pct": 82.78,
+          "predicted_pct": 81.87143764431175,
+          "residual": 0.9085623556882467
+        },
+        {
+          "kprime": 100,
+          "D": 3000,
+          "x": 0.6,
+          "measured_pct": 59.83,
+          "predicted_pct": 54.877870399285,
+          "residual": 4.952129600714997
+        },
+        {
+          "kprime": 200,
+          "D": 200,
+          "x": 0.08,
+          "measured_pct": 92.48,
+          "predicted_pct": 92.31015727035114,
+          "residual": 0.16984272964886316
+        },
+        {
+          "kprime": 200,
+          "D": 1000,
+          "x": 0.4,
+          "measured_pct": 69.42,
+          "predicted_pct": 67.0266408273645,
+          "residual": 2.393359172635499
+        },
+        {
+          "kprime": 200,
+          "D": 3000,
+          "x": 1.2,
+          "measured_pct": 38.89,
+          "predicted_pct": 30.112191469749582,
+          "residual": 8.777808530250418
+        },
+        {
+          "kprime": 500,
+          "D": 50,
+          "x": 0.05,
+          "measured_pct": 95.17,
+          "predicted_pct": 95.12056281970314,
+          "residual": 0.04943718029686295
+        },
+        {
+          "kprime": 500,
+          "D": 200,
+          "x": 0.2,
+          "measured_pct": 82.57,
+          "predicted_pct": 81.86488294786356,
+          "residual": 0.7051170521364298
+        },
+        {
+          "kprime": 500,
+          "D": 1000,
+          "x": 1.0,
+          "measured_pct": 43.0,
+          "predicted_pct": 36.76954247709637,
+          "residual": 6.230457522903627
+        },
+        {
+          "kprime": 500,
+          "D": 3000,
+          "x": 3.0,
+          "measured_pct": 13.74,
+          "predicted_pct": 4.971239399803616,
+          "residual": 8.768760600196384
+        },
+        {
+          "kprime": 1000,
+          "D": 50,
+          "x": 0.1,
+          "measured_pct": 90.64,
+          "predicted_pct": 90.47468180040357,
+          "residual": 0.16531819959642746
+        },
+        {
+          "kprime": 1000,
+          "D": 200,
+          "x": 0.4,
+          "measured_pct": 68.88,
+          "predicted_pct": 67.00516137378226,
+          "residual": 1.8748386262177377
+        },
+        {
+          "kprime": 1000,
+          "D": 1000,
+          "x": 2.0,
+          "measured_pct": 21.65,
+          "predicted_pct": 13.506452244668338,
+          "residual": 8.14354775533166
+        },
+        {
+          "kprime": 2000,
+          "D": 50,
+          "x": 0.2,
+          "measured_pct": 82.36,
+          "predicted_pct": 81.84024506760997,
+          "residual": 0.519754932390029
+        },
+        {
+          "kprime": 2000,
+          "D": 200,
+          "x": 0.8,
+          "measured_pct": 48.99,
+          "predicted_pct": 44.860869278059695,
+          "residual": 4.129130721940307
+        }
+      ]
+    },
+    {
+      "label": "DPR",
+      "path": "results/runs/migration_dpr_490k_/migration_dpr_490k.json",
+      "N": 449071,
+      "points": 12,
+      "mean": 7.6827149036099875,
+      "min": 0.23955106190533115,
+      "residuals": [
+        {
+          "kprime": 50,
+          "D": 898,
+          "x": 0.09998418958249364,
+          "measured_pct": 92.31,
+          "predicted_pct": 90.48466870896408,
+          "residual": 1.8253312910359227
+        },
+        {
+          "kprime": 100,
+          "D": 898,
+          "x": 0.19996837916498728,
+          "measured_pct": 86.32,
+          "predicted_pct": 81.8738410584755,
+          "residual": 4.446158941524487
+        },
+        {
+          "kprime": 200,
+          "D": 180,
+          "x": 0.08016549721536238,
+          "measured_pct": 93.14,
+          "predicted_pct": 92.29471048968037,
+          "residual": 0.8452895103196312
+        },
+        {
+          "kprime": 200,
+          "D": 898,
+          "x": 0.39993675832997455,
+          "measured_pct": 76.83,
+          "predicted_pct": 67.03027228614505,
+          "residual": 9.79972771385495
+        },
+        {
+          "kprime": 500,
+          "D": 45,
+          "x": 0.05010343575960149,
+          "measured_pct": 95.35,
+          "predicted_pct": 95.11044893809466,
+          "residual": 0.23955106190533115
+        },
+        {
+          "kprime": 500,
+          "D": 180,
+          "x": 0.20041374303840595,
+          "measured_pct": 84.82,
+          "predicted_pct": 81.83007071945563,
+          "residual": 2.9899292805443594
+        },
+        {
+          "kprime": 500,
+          "D": 898,
+          "x": 0.9998418958249363,
+          "measured_pct": 58.11,
+          "predicted_pct": 36.77327137086308,
+          "residual": 21.33672862913692
+        },
+        {
+          "kprime": 1000,
+          "D": 45,
+          "x": 0.10020687151920298,
+          "measured_pct": 91.11,
+          "predicted_pct": 90.45491748560117,
+          "residual": 0.6550825143988277
+        },
+        {
+          "kprime": 1000,
+          "D": 180,
+          "x": 0.4008274860768119,
+          "measured_pct": 73.94,
+          "predicted_pct": 66.9466310891396,
+          "residual": 6.993368910860397
+        },
+        {
+          "kprime": 1000,
+          "D": 898,
+          "x": 1.9996837916498726,
+          "measured_pct": 41.09,
+          "predicted_pct": 13.507655735359556,
+          "residual": 27.582344264640447
+        },
+        {
+          "kprime": 2000,
+          "D": 45,
+          "x": 0.20041374303840595,
+          "measured_pct": 83.57,
+          "predicted_pct": 81.80258366375395,
+          "residual": 1.7674163362460433
+        },
+        {
+          "kprime": 2000,
+          "D": 180,
+          "x": 0.8016549721536238,
+          "measured_pct": 58.49,
+          "predicted_pct": 44.77834961114747,
+          "residual": 13.711650388852533
+        }
+      ]
+    },
+    {
+      "label": "FiQA",
+      "path": "results/runs/migration_fiqa_/migration_fiqa.json",
+      "N": 57638,
+      "points": 5,
+      "mean": 13.301328169456417,
+      "min": 1.2745089126398597,
+      "residuals": [
+        {
+          "kprime": 10,
+          "D": 648,
+          "x": 0.1124258301814775,
+          "measured_pct": 90.64,
+          "predicted_pct": 89.36549108736014,
+          "residual": 1.2745089126398597
+        },
+        {
+          "kprime": 20,
+          "D": 648,
+          "x": 0.224851660362955,
+          "measured_pct": 83.4,
+          "predicted_pct": 79.86035170047636,
+          "residual": 3.5396482995236482
+        },
+        {
+          "kprime": 50,
+          "D": 648,
+          "x": 0.5621291509073875,
+          "measured_pct": 68.21,
+          "predicted_pct": 56.98551285943654,
+          "residual": 11.224487140563454
+        },
+        {
+          "kprime": 100,
+          "D": 648,
+          "x": 1.124258301814775,
+          "measured_pct": 53.83,
+          "predicted_pct": 32.45762782277287,
+          "residual": 21.372372177227128
+        },
+        {
+          "kprime": 200,
+          "D": 648,
+          "x": 2.24851660362955,
+          "measured_pct": 39.61,
+          "predicted_pct": 10.514375682672013,
+          "residual": 29.09562431732799
+        }
+      ]
+    },
+    {
+      "label": "CIPBench",
+      "path": "results/runs/migration_cipbench_/migration_cipbench.json",
+      "N": 2366,
+      "points": 6,
+      "mean": 27.999511507840847,
+      "min": 7.436986031285258,
+      "residuals": [
+        {
+          "kprime": 10,
+          "D": 48,
+          "x": 0.2028740490278952,
+          "measured_pct": 89.04,
+          "predicted_pct": 81.60301396871475,
+          "residual": 7.436986031285258
+        },
+        {
+          "kprime": 10,
+          "D": 238,
+          "x": 1.0059171597633136,
+          "measured_pct": 69.9,
+          "predicted_pct": 36.49302846828838,
+          "residual": 33.406971531711626
+        },
+        {
+          "kprime": 20,
+          "D": 48,
+          "x": 0.4057480980557904,
+          "measured_pct": 81.88,
+          "predicted_pct": 66.53295909656774,
+          "residual": 15.347040903432259
+        },
+        {
+          "kprime": 20,
+          "D": 238,
+          "x": 2.0118343195266273,
+          "measured_pct": 55.55,
+          "predicted_pct": 13.260431671759928,
+          "residual": 42.289568328240065
+        },
+        {
+          "kprime": 50,
+          "D": 48,
+          "x": 1.0143702451394758,
+          "measured_pct": 66.9,
+          "predicted_pct": 35.87096900033529,
+          "residual": 31.029030999664712
+        },
+        {
+          "kprime": 100,
+          "D": 48,
+          "x": 2.0287404902789516,
+          "measured_pct": 51.07,
+          "predicted_pct": 12.582528747288862,
+          "residual": 38.48747125271114
+        }
+      ]
+    },
+    {
+      "label": "ORCAS (real log)",
+      "path": "results/runs/estimate_orcas_100k_/estimate_orcas_100k.json",
+      "N": 212876,
+      "points": 17,
+      "mean": 12.305403762314787,
+      "min": 0.2309514638268837,
+      "residuals": [
+        {
+          "kprime": 200,
+          "D": 54,
+          "x": 0.05073376049906988,
+          "measured_pct": 95.4805,
+          "predicted_pct": 95.05090384192088,
+          "residual": 0.42959615807912144
+        },
+        {
+          "kprime": 200,
+          "D": 90,
+          "x": 0.0845562674984498,
+          "measured_pct": 92.9236,
+          "predicted_pct": 91.8883426114036,
+          "residual": 1.035257388596392
+        },
+        {
+          "kprime": 200,
+          "D": 149,
+          "x": 0.13998759841410022,
+          "measured_pct": 89.3797,
+          "predicted_pct": 86.9311813089648,
+          "residual": 2.448518691035204
+        },
+        {
+          "kprime": 200,
+          "D": 246,
+          "x": 0.2311204644957628,
+          "measured_pct": 83.84270000000001,
+          "predicted_pct": 79.35576387624378,
+          "residual": 4.486936123756223
+        },
+        {
+          "kprime": 200,
+          "D": 406,
+          "x": 0.3814427178263402,
+          "measured_pct": 77.5874,
+          "predicted_pct": 68.27530744907037,
+          "residual": 9.312092550929634
+        },
+        {
+          "kprime": 200,
+          "D": 670,
+          "x": 0.629474435821793,
+          "measured_pct": 69.13130000000001,
+          "predicted_pct": 53.271414009571195,
+          "residual": 15.859885990428815
+        },
+        {
+          "kprime": 200,
+          "D": 1105,
+          "x": 1.0381630620643003,
+          "measured_pct": 59.956999999999994,
+          "predicted_pct": 35.393179562182546,
+          "residual": 24.563820437817448
+        },
+        {
+          "kprime": 200,
+          "D": 1823,
+          "x": 1.7127341738852666,
+          "measured_pct": 50.3396,
+          "predicted_pct": 18.022679533401334,
+          "residual": 32.31692046659866
+        },
+        {
+          "kprime": 200,
+          "D": 3007,
+          "x": 2.8251188485315395,
+          "measured_pct": 41.193900000000006,
+          "predicted_pct": 5.922291111868576,
+          "residual": 35.27160888813143
+        },
+        {
+          "kprime": 500,
+          "D": 33,
+          "x": 0.07750991187357899,
+          "measured_pct": 92.7643,
+          "predicted_pct": 92.53334853617312,
+          "residual": 0.2309514638268837
+        },
+        {
+          "kprime": 500,
+          "D": 54,
+          "x": 0.1268344012476747,
+          "measured_pct": 89.1012,
+          "predicted_pct": 88.07481270686415,
+          "residual": 1.0263872931358549
+        },
+        {
+          "kprime": 500,
+          "D": 90,
+          "x": 0.2113906687461245,
+          "measured_pct": 83.3297,
+          "predicted_pct": 80.92565325940869,
+          "residual": 2.404046740591312
+        },
+        {
+          "kprime": 500,
+          "D": 149,
+          "x": 0.34996899603525056,
+          "measured_pct": 76.0856,
+          "predicted_pct": 70.44199070617776,
+          "residual": 5.643609293822237
+        },
+        {
+          "kprime": 500,
+          "D": 246,
+          "x": 0.577801161239407,
+          "measured_pct": 65.9079,
+          "predicted_pct": 56.0749615617468,
+          "residual": 9.832938438253201
+        },
+        {
+          "kprime": 500,
+          "D": 406,
+          "x": 0.9536067945658505,
+          "measured_pct": 55.5121,
+          "predicted_pct": 38.491665061377134,
+          "residual": 17.020434938622863
+        },
+        {
+          "kprime": 500,
+          "D": 670,
+          "x": 1.5736860895544824,
+          "measured_pct": 43.1392,
+          "predicted_pct": 20.689639590876034,
+          "residual": 22.44956040912397
+        },
+        {
+          "kprime": 500,
+          "D": 1105,
+          "x": 2.595407655160751,
+          "measured_pct": 32.2981,
+          "predicted_pct": 7.438801313397849,
+          "residual": 24.85929868660215
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "analysis/tab_form.py",
+      "MS MARCO=evidence/20261013-165911_migration_msmarco_500k_bsl__migration.json",
+      "DPR=results/runs/migration_dpr_490k_/migration_dpr_490k.json",
+      "FiQA=results/runs/migration_fiqa_/migration_fiqa.json",
+      "CIPBench=results/runs/migration_cipbench_/migration_cipbench.json",
+      "ORCAS (real log)=results/runs/estimate_orcas_100k_/estimate_orcas_100k.json",
+      "--out",
+      "D:\\SemView\\thaw-r18\\results\\runs\\20261017-003632_tab_form_rows/tab_form.json"
+    ],
+    "dtype": null,
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

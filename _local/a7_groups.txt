@@ -1,0 +1,183 @@
+uncovered: 137
+distinct quantities with an evidence home: 41
+uncovered with NO usable home: 54
+
+0.9767         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=1000].recall_at_kprime
+               printed at body.tex:172, body.tex:1240, body.tex:1266
+               context: recall falls 0.977 to 0.848 under the literal reading, and keeping every
+0.9304         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=200].recall_on_d_subset
+               printed at body.tex:1018, body.tex:1040
+               context: DPR $\to$ BGE         & 0.606 & 0.762 & 0.842 & 0.891 & \textbf{0.930} \\
+0.005          20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=10].recall_on_d_subset_sd
+               printed at body.tex:1025, body.tex:1281, body.tex:1406
+               context: within 0.004 of the raw ones at these depths.}
+0.9306         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=200].recall_at_kprime
+               printed at body.tex:1095, body.tex:1243, body.tex:1278, body.tex:1280, body.tex:1542, body.tex:1565, body.tex:1606
+               context: 200 & 0.864 & 0.895 & 0.912 & 0.931 \\
+0.9624         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=500].recall_at_kprime
+               printed at body.tex:1096, body.tex:1184
+               context: 500 & 0.916 & 0.936 & 0.949 & \textbf{0.962} \\
+0.9853         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=2000].recall_at_kprime
+               printed at body.tex:1427
+               context: $0.985$; encoded one at a time (5.2\,ms, the rate a lone query pays) it is ten
+0.005          20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=50].x_dk_over_n
+               printed at appendix.tex:74
+               context: costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+0.001          20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=10].reached
+               printed at appendix.tex:81
+               context: latency $0.5$ against $1.4$\,s --- at a cost of $0.0010$ end-to-end recall, so
+0.0042         20261012-113252_migration_msmarco_8m_dseed1__migra frontier[kprime=20].recall_on_d_subset_sd
+               printed at appendix.tex:161
+               context: fraction of the query set gives $x = 0.0002$ on one corpus and $3$ on another,
+0.0119         20261012-132839_backfill_rate_b64_pgload__backfill phases[1].copy_ms_per_unit
+               printed at body.tex:174, body.tex:1279
+               context: total forward-pass budget the advantage is \textbf{+0.012} when each leg
+40.0           20261012-132839_backfill_rate_b64_pgload__backfill phases[0].ms_per_unit_series[3][0]
+               printed at body.tex:175, body.tex:1251, body.tex:1277
+               context: serves 40\% of its corpus and \textbf{nothing at all} when it serves
+4.4113         20261012-132839_backfill_rate_b64_pgload__backfill phases[2].ms_per_unit_series[18][1]
+               printed at body.tex:1254
+               context: every abandoned index returns 4.8 of them at the same depth, for 4.4\% more
+210.0          20261012-132839_backfill_rate_b64_pgload__backfill phases[0].ms_per_unit_series[20][0]
+               printed at body.tex:1278
+               context: serves 0.943 for 203.9\% of $N$ against the literal design's 0.931 for 210.0\%:
+60.0           20261012-132839_backfill_rate_b64_pgload__backfill phases[0].ms_per_unit_series[5][0]
+               printed at body.tex:1279, body.tex:1494
+               context: \textbf{+0.012}. At 60\% reach the margin reaches +0.024. \textbf{At 20\% reach
+3.7854         20261012-132839_backfill_rate_b64_pgload__backfill phases[2].fwd_ms_per_unit
+               printed at body.tex:1383
+               context: 32           & 3.897 & 3.785 & $0.972$ \\
+1.0206         20261012-132839_backfill_rate_b64_pgload__backfill result.factors.device_ms_per_padded_token
+               printed at body.tex:1403
+               context: $1.017 \to 1.021$) and the penalty goes $0.898 \to 0.917$ at the backfill batch
+30.0           20261012-132839_backfill_rate_b64_pgload__backfill phases[0].ms_per_unit_series[2][0]
+               printed at appendix.tex:66
+               context: 30\% of the rows in 100 sampled windows left them at 357 of 500 rows on
+0.9455         20261012-132839_backfill_rate_b64_pgload__backfill result.factors.forward_share_of_repair_time
+               printed at appendix.tex:75
+               context: and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+0.9595         20261012-144200_migration_msmarco_8m_dseed3__migra frontier[kprime=500].recall_on_d_subset
+               printed at body.tex:1540, body.tex:1580
+               context: backfill, traffic order    & 0.353 & \textbf{0.960} \\
+0.9284         20261012-144200_migration_msmarco_8m_dseed3__migra frontier[kprime=200].recall_on_d_subset
+               printed at appendix.tex:75
+               context: and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+0.0042         20261012-145915_migration_msmarco_8m_dseed5__migra frontier[kprime=500].recall_on_d_subset_sd
+               printed at body.tex:1002
+               context: moves ground truth by $0.0024$. Whatever raises recall with $N$, it is a
+2.0            20261013-160555_n_ladder_msmarco__n_ladder.json    frontier[kprime=200].x_dk_over_n
+               printed at body.tex:1429, body.tex:1650
+               context: all 6,980 dev intents $\rho = 0.965$, a net saving of 2.0\% with batched
+0.9295         20261013-165911_migration_msmarco_500k_bsl__migrat frontier[kprime=500].recall_at_kprime
+               printed at body.tex:109, body.tex:789, body.tex:1017, body.tex:1031, body.tex:1045, body.tex:1058, body.tex:1068, body.tex:1109 ...
+               context: MiniLM to BGE, cross-space recall is $0.929$ at $K' = 500$, and $43\%$ of the
+0.9532         20261013-165911_migration_msmarco_500k_bsl__migrat frontier[kprime=1000].recall_at_kprime
+               printed at body.tex:1017
+               context: MiniLM $\to$ BGE      & 0.768 & 0.883 & \textbf{0.929} & 0.953 & 0.970 \\
+0.93596        20261013-165911_migration_msmarco_500k_bsl__migrat baselines[scheme=backfill-random].recall_at_k
+               printed at body.tex:1096, body.tex:1538, body.tex:1597
+               context: 500 & 0.916 & 0.936 & 0.949 & \textbf{0.962} \\
+0.9724         20261013-165911_migration_msmarco_500k_bsl__migrat frontier[kprime=2000].recall_on_d_subset
+               printed at body.tex:1383
+               context: 32           & 3.897 & 3.785 & $0.972$ \\
+3.7801         20261013-191607_backfill_rate_b16_pgload__backfill phases[0].ms_per_unit_series[27][1]
+               printed at body.tex:1382
+               context: 16 (fastest) & 3.780 & 3.772 & $\mathbf{0.998}$ \\
+1.0134         20261013-191607_backfill_rate_b16_pgload__backfill result.factors.which_units_tokens_per_unit
+               printed at appendix.tex:174
+               context: encoder's best batch --- gives $1.013\times$, an upper bound, because a
+0.9364         20261014-104501_step2_load_t1__step2.json          offline_exact_recall.500
+               printed at body.tex:1175, body.tex:1181, appendix.tex:86
+               context: 0.9364 at $K' = 500$, and does not reach it. The two measurements are the same
+19.0           20261014-104501_step2_load_t1__step2.json          boundary_ties.500
+               printed at body.tex:1645
+               context: migration costs 18--19\% \emph{more} GPU than a batch re-embed. The design
+8.0            20261014-111235_step2_load_t8__step2.json          threads
+               printed at body.tex:1479
+               context: 8\%, the same order of conservatism at a load $2.5\times$ further out.
+0.8483         20261016-094733_drift_sweep__drift_sweep.json      rows[5].literal_last
+               printed at body.tex:172, body.tex:1240, body.tex:1266
+               context: recall falls 0.977 to 0.848 under the literal reading, and keeping every
+0.9417         20261016-094733_drift_sweep__drift_sweep.json      rows[5].all_last
+               printed at body.tex:1019, body.tex:1032
+               context: FiQA, out of domain   & 0.682 & 0.871 & 0.942 & 0.971 & 0.987 \\
+0.895          20261016-094733_drift_sweep__drift_sweep.json      rows[0].all_last
+               printed at body.tex:1095, body.tex:1240
+               context: 200 & 0.864 & 0.895 & 0.912 & 0.931 \\
+0.94           20261016-094733_drift_sweep__drift_sweep.json      rows[4].nearest_last
+               printed at appendix.tex:75
+               context: and 1000, against window overlaps of $0.928$, $0.940$ and $0.945$: ranking
+0.9247         20261016-094945_chain_synthetic_rho__chain.json    sweeps[0].rows[kprime=500].recall_candidates
+               printed at body.tex:1043, body.tex:1046
+               context: MiniLM $\rightarrow$ BGE reaches 0.922 at $K' = 500$ on the same 446{,}392
+0.9062000000000001 20261016-220554_opsafe_replace__operator_safety.js report.rows[4].mixed_index_recall_at_k
+               printed at body.tex:1174
+               context: \texttt{docs\_new}, union at $K' = 200$ reaches 0.9062 against the base design's
+0.9773         20261017-000011_chain_real_rho3__chain.json        sweeps[1].rows[kprime=1000].recall_candidates
+               printed at body.tex:1242, body.tex:1243, body.tex:1289, body.tex:1290
+               context: original + most recent   & --- & 0.973 & 0.918 & 0.882 & 176.0 \\
+92.7643        20261017-003632_tab_form_rows__tab_form.json       rows[N=212876].residuals[kprime=500].measured_pct
+               printed at appendix.tex:69
+               context: $\mathit{ef}_{\mathrm{construction}} = 64$) contains 92.8\%, 94.0\% and
+1.0158         20261017-010914_backfill_rate_b16_tokensort_pgload result.factors.which_units_tokens_per_unit
+               printed at body.tex:1365, appendix.tex:249
+               context: or near the device's best batch: chunks of 16 cost $1.016\times$ the optimum and
+0.0108         20261017-010914_backfill_rate_b16_tokensort_pgload phases[0].copy_ms_per_unit
+               printed at appendix.tex:74
+               context: costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+
+=== no usable home (need a declaration or a new measurement) ===
+  body.tex:1167  0.9944  stream rises from 0.874 to 0.980 and the top-1 hit rate from 0.9944 to 0.9974,
+  body.tex:1167  0.9974  stream rises from 0.874 to 0.980 and the top-1 hit rate from 0.9944 to 0.9974,
+  body.tex:1168  0.905  while the first decile moves only from 0.896 to 0.905 --- the earliest queries
+  body.tex:1241  0.479  most recent partial only$^\dagger$ & --- & 0.479 & 0.416 & 0.397 & 166.1 \\
+  body.tex:1241  0.416  most recent partial only$^\dagger$ & --- & 0.479 & 0.416 & 0.397 & 166.1 \\
+  body.tex:1241  0.397  most recent partial only$^\dagger$ & --- & 0.479 & 0.416 & 0.397 & 166.1 \\
+  body.tex:1242  0.918  original + most recent   & --- & 0.973 & 0.918 & 0.882 & 176.0 \\
+  body.tex:1269  0.397  sources --- the most recent one alone serves 0.397 --- so what they contribute
+  body.tex:1278  0.943  serves 0.943 for 203.9\% of $N$ against the literal design's 0.931 for 210.0\%:
+  body.tex:1278  203.9  serves 0.943 for 203.9\% of $N$ against the literal design's 0.931 for 210.0\%:
+  body.tex:1279  0.024  \textbf{+0.012}. At 60\% reach the margin reaches +0.024. \textbf{At 20\% reach
+  body.tex:1291  2.7  0.896) for 2.7\% more passes. The gap grows with chain length, because a query
+  body.tex:1341  9.3  batch of 213, with only 9.3\% of repair work in batches below 32 --- and
+  body.tex:1366  1.244  chunks of 4 cost $1.244\times$, so the curve is a shallow basin and steep on
+  body.tex:1382  3.772  16 (fastest) & 3.780 & 3.772 & $\mathbf{0.998}$ \\
+  body.tex:1383  3.897  32           & 3.897 & 3.785 & $0.972$ \\
+  body.tex:1384  4.218  64           & 4.218 & 3.788 & $0.898$ \\
+  body.tex:1384  3.788  64           & 4.218 & 3.788 & $0.898$ \\
+  body.tex:1393  1.017  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1393  0.154  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1393  0.115  ($1.017$). Tokenization points the other way --- $0.154$ against $0.115$\,ms per
+  body.tex:1403  1.017  $1.017 \to 1.021$) and the penalty goes $0.898 \to 0.917$ at the backfill batch
+  body.tex:1404  0.019  that was loaded, 64, a $0.019$ shift. Repeating the measurement at the ledger's
+  body.tex:1411  43.1  at $D = 200$, 43.1\% at $D = 10^3$ and 13.9\% at $D = 3 \times 10^3$, against
+  body.tex:1411  13.9  at $D = 200$, 43.1\% at $D = 10^3$ and 13.9\% at $D = 3 \times 10^3$, against
+  body.tex:1413  12.6  upper bound the same four are 95.1, 82.3, 42.3 and 12.6\%, so the two
+  body.tex:1443  0.447  (reached 0.447 against 0.510) but in the direction that \emph{raises} savings
+  body.tex:1476  37  the closed form predicted 37\%, so real clicks concentrate far more than a
+  body.tex:1478  34  $K' = 500$; there the same traffic leaves 34\% untouched against a predicted
+  body.tex:1505  34  $10^3$ & 0.66 & 34\% \\
+  body.tex:1506  4  $10^4$ & 0.96 &  4\% \\
+  body.tex:1507  0.997  $10^5$ & 0.997 & 0.3\% \\
+  body.tex:1507  0.3  $10^5$ & 0.997 & 0.3\% \\
+  body.tex:1508  0.2  $10^6$ & 0.998 & 0.2\% \\
+  body.tex:1537  0.494  stale (no migration)       & 0.494 & 0.510 \\
+  body.tex:1539  0.290  backfill, corpus order     & 0.290 & 0.935 \\
+  body.tex:1540  0.353  backfill, traffic order    & 0.353 & \textbf{0.960} \\
+  body.tex:1550  31.1  every other scheme is then given exactly its spend --- 31.1\% of the corpus at
+  body.tex:1551  93.7  $D = 400$ distinct intents and 93.7\% at $D = 5{,}000$: a migration that still
+  body.tex:1560  82.5  version charged lazy for the warm-up windows alone ($B = 82.5\%$) and gave every
+  body.tex:1578  0.353  where lazy spends 31\% of the corpus, the best backfill reaches 0.353 against
+  body.tex:1579  93.7  lazy's 0.934. At $D = 5{,}000$, where it spends 93.7\%, the backfill reaches
+  body.tex:1588  93.7  not: at 93.7\% reached there is little left to order and little left to repair,
+  body.tex:1597  0.290  (0.290 against 0.314; 0.935 against 0.936), and is nominally worse at both.
+  body.tex:1602  4  Fitted on 4\% of the corpus, the map reaches 0.196 alone --- below even the
+  body.tex:1605  93.7  59.7\% of the corpus against lazy's 93.7\% and still reaches only 0.545 against
+  body.tex:1643  0.1  corpus, and a few hundred queries reach almost all of it. Savings are 0.1\% at
+  body.tex:1649  13.9  faster than the budget does. Net savings are 13.9\% at $D = 3{,}000$, where
+  appendix.tex:69  94.0  $\mathit{ef}_{\mathrm{construction}} = 64$) contains 92.8\%, 94.0\% and
+  appendix.tex:70  94.5  94.5\% of the exact window at $K' = 200$, 500 and 1000. That is the old
+  appendix.tex:74  0.0110  costs $0.0108$, $0.0110$ and $0.0100$ of end-to-end recall at $K' = 200$, 500
+  appendix.tex:181  18  times larger, whose padding is $18\%$ worse, it is $0.898$.
+  appendix.tex:250  1.119  chunks of 32 $1.119\times$, while going \emph{smaller} is worse than going
+  appendix.tex:251  1.244  moderately larger --- chunks of 4 cost $1.244\times$. The curve is a shallow

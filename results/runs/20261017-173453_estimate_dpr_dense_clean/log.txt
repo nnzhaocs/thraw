@@ -1,0 +1,21 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus dpr_wiki --limit 449071 --dpr-path D:/SemView/semview_v14/wiki_dpr_clean --dpr-variant psgs_w100.nq.no_index --old dpr:psgs_w100.nq.no_index --kprimes 500 --out D:\SemView\thaw-1017\results\runs\20261017-173453_estimate_dpr_dense_clean/estimate.json
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\SemView\thaw-1017\semview\estimate.py", line 345, in <module>
+  File "D:\SemView\thaw-1017\semview\estimate.py", line 273, in main
+  File "D:\SemView\thaw-1017\semview\migration.py", line 349, in dpr_corpus
+  File "D:\SemView\thaw-1017\semview\migration.py", line 306, in select_gold_and_distractors
+  File "D:\SemView\thaw-1017\semview\migration.py", line 373, in _iter_dpr_rows
+  File "C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\datasets\__init__.py", line 17, in <module>
+  File "C:\Users\26240\AppData\Local\Programs\Python\Python311\Lib\site-packages\datasets\arrow_dataset.py", line 75, in <module>
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1149, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1130, in get_data
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\26240\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\packaging\\__init__.py'
+building a gold+distractor subset: 47,461 gold passages + 401,610 uniform distractors, from one pass over all 21,015,300 rows
+
+[exit 1 after 159 s]

@@ -1,0 +1,45 @@
+$ python analysis/chain.py --synthetic --legs 4 --eval-queries 150 --queries-per-leg 150 --kprimes 500,1000 --out /home/claude/chain_review/thaw/results/runs/20261016-023703_chain_synthetic_depth_control/chain.json
+
+  N=200,000  4 legs  k=10  150 queries per leg  150 evaluation queries (load x=0.75)
+    legs served at reach depth each row's own K'; each policy serves them itself and is charged for the passes that took
+    original-only    reached  31.4%  31.3%  31.2%  31.3%  52.9%  52.7%  52.6%  52.8%   cumulative encode  211.1% of N
+    union-nearest    reached  31.4%  44.5%  46.4%  47.0%  52.9%  68.6%  70.8%  71.5%   cumulative encode  263.9% of N
+    union-all        reached  31.4%  44.5%  53.6%  60.7%  52.9%  68.6%  78.0%  83.9%   cumulative encode  283.5% of N
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.817       0.676       0.571       0.449
+  previous-only              -       0.303       0.427       0.462
+  union-nearest              -       0.771       0.759       0.708
+  union-all                  -       0.771       0.793       0.795
+  passes, % of N          0.0%       44.5%       53.5%       60.4%   (union-all)
+
+  K'=1000:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.901       0.767       0.684       0.553
+  previous-only              -       0.509       0.657       0.709
+  union-nearest              -       0.881       0.888       0.874
+  union-all                  -       0.881       0.919       0.941
+  passes, % of N          0.0%       68.8%       78.0%       83.9%   (union-all)
+
+  at the last leg, cheapest first, charged for the whole chain (cumulative encode = forward passes over all 4 legs)
+  policy              K‘  cum.encode   % of N  eval passes   recall
+  ------------------------------------------------------------------
+  original-only      500     250,532   125.3%       62,523    0.449
+  previous-only      500     338,607   169.3%       49,173    0.462
+  union-nearest      500     338,607   169.3%       93,588    0.708
+  union-all          500     380,387   190.2%      120,886    0.795
+  original-only     1000     422,179   211.1%      105,740    0.553
+  previous-only     1000     527,770   263.9%       88,542    0.709
+  union-nearest     1000     527,770   263.9%      143,068    0.874
+  union-all         1000     566,937   283.5%      167,763    0.941
+
+  matched on cumulative encode: union-nearest at K'=500 serves 0.708 for 169.3% of N,
+  against original-only at K'=1000 serving 0.553 for 211.1%.
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023703_chain_synthetic_depth_control/chain.json (24,152 bytes, sha256 293248f6a5af)
+
+wrote /home/claude/chain_review/thaw/results/runs/20261016-023703_chain_synthetic_depth_control/chain.json
+
+[exit 0 after 57 s]

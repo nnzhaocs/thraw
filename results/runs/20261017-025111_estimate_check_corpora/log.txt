@@ -1,0 +1,12 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/estimate_check.py MS MARCO=evidence/20261013-165911_migration_msmarco_500k_bsl__migration.json MS MARCO 8.8M=results/runs/20261012-113252_migration_msmarco_8m_dseed1/migration.json CIPBench=results/runs/migration_cipbench_/migration_cipbench.json DPR=results/runs/migration_dpr_490k_/migration_dpr_490k.json FiQA=results/runs/migration_fiqa_/migration_fiqa.json --out D:\SemView\thaw-r18\results\runs\20261017-025111_estimate_check_corpora/estimate_check.json
+MS MARCO       N=  500,000  x=3.00  D=3000   measured=0.8626 predicted=0.9503 error=+8.77 pts  (span +0.05..+8.78 over 18 pts)
+MS MARCO 8.8M  N=8,841,823  x=1.12  D=4951   measured=0.5818 predicted=0.6737 error=+9.19 pts  (span +0.20..+9.19 over 14 pts)
+CIPBench       N=    2,366  x=2.03  D=48     measured=0.4893 predicted=0.8742 error=+38.49 pts  (span +7.44..+42.29 over 6 pts)
+DPR            N=  449,071  x=2.00  D=898    measured=0.5891 predicted=0.8649 error=+27.58 pts  (span +0.24..+27.58 over 12 pts)
+FiQA           N=   57,638  x=2.25  D=648    measured=0.6039 predicted=0.8949 error=+29.10 pts  (span +1.27..+29.10 over 5 pts)
+
+  5 corpora, 55 points: the form never under-predicts savings (min error +0.05 pts); max |error| +42.29 pts on CIPBench
+wrote D:\SemView\thaw-r18\results\runs\20261017-025111_estimate_check_corpora\estimate_check.json (4,103 bytes, sha256 65fb697ffc5d)
+wrote D:\SemView\thaw-r18\results\runs\20261017-025111_estimate_check_corpora/estimate_check.json
+
+[exit 0 after 11 s]

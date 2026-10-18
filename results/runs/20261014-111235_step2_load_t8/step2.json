@@ -1,0 +1,133 @@
+{
+  "queries": 500,
+  "N": 500000,
+  "chunk": 16,
+  "precomputed": true,
+  "threads": 8,
+  "offline_exact_recall": {
+    "500": 0.9364
+  },
+  "boundary_ties": {
+    "500": 19
+  },
+  "runs": [
+    {
+      "window": "exact",
+      "kprime": 500,
+      "union_k": 0,
+      "queries": 500,
+      "threads": 8,
+      "iterative": null,
+      "plan_indexes": [],
+      "recall_e2e": 0.9364,
+      "recall_window": 0.9364,
+      "recall_candidates": 0.9364,
+      "union_gain": 0.0,
+      "recall_e2e_by_decile": [
+        0.96,
+        0.93,
+        0.944,
+        0.93,
+        0.946,
+        0.908,
+        0.916,
+        0.962,
+        0.924,
+        0.944
+      ],
+      "hit_rate_by_rank": [
+        0.998,
+        0.988,
+        0.962,
+        0.954,
+        0.948,
+        0.912,
+        0.908,
+        0.904,
+        0.892,
+        0.898
+      ],
+      "per_query_p10": 0.7,
+      "worst_decile_mean": 0.622,
+      "extra_per_query_mean": 0.0,
+      "e2e_equals_window": 1.0,
+      "window_min": 500,
+      "latency_ms": {
+        "p50": 10358.46,
+        "p95": 14450.1,
+        "p99": 15986.43,
+        "max": 16416.23,
+        "first_decile_p50": 14302.99,
+        "last_decile_p50": 7236.71
+      },
+      "mean_component_ms": {
+        "q_old_ms": 0.0,
+        "q_new_ms": 0.0,
+        "window_ms": 497.65,
+        "present_ms": 2.937,
+        "text_ms": 4.577,
+        "encode_ms": 9712.777,
+        "write_ms": 35.386,
+        "wait_ms": 66.708,
+        "union_ms": 0.704,
+        "rank_ms": 6.354
+      },
+      "unaccounted_ms_mean": 7.297,
+      "stale_per_query_mean": 366.39,
+      "encoded_units": 183193,
+      "reached": 0.36639,
+      "encode_ms_per_unit": 26.5097,
+      "write_ms_per_unit": 0.0966,
+      "docs_new_rows": 183193,
+      "docs_new_distinct": 183193,
+      "encoder_calls": 11672,
+      "wall_s": 648.1,
+      "recall_offline_exact": 0.9364,
+      "ann_loss": 0.0
+    }
+  ],
+  "gates": {
+    "persisted once (exact K'=500 u=0)": true,
+    "rank is exact within the candidates (exact K'=500 u=0)": true,
+    "full window (exact K'=500 u=0)": true,
+    "exact plan has no HNSW (exact K'=500 u=0)": true,
+    "E1 reproduces offline recall (exact K'=500 u=0)": true
+  },
+  "union_vs_deeper_base": [],
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "host": "Moralaw",
+    "argv": [
+      "D:\\SemView\\thaw-2026-10-11\\thaw_pg\\__main__.py",
+      "step2",
+      "--enc-new",
+      "local:BAAI/bge-base-en-v1.5",
+      "--enc-old",
+      "local:sentence-transformers/all-MiniLM-L6-v2",
+      "--precomputed",
+      "--windows",
+      "exact",
+      "--kprimes",
+      "500",
+      "--queries",
+      "500",
+      "--chunk",
+      "16",
+      "--threads",
+      "8",
+      "--out",
+      "D:\\SemView\\thaw-2026-10-11\\results\\runs\\20261014-111235_step2_load_t8/step2.json"
+    ],
+    "dtype": null,
+    "device": null,
+    "numpy": "2.2.6",
+    "torch": "2.6.0+cu124",
+    "sentence_transformers": "5.5.1",
+    "transformers": "4.57.3",
+    "faiss": "1.14.3",
+    "psycopg": "3.3.6",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cuda": "12.4"
+  }
+}

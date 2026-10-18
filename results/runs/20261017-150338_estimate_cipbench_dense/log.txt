@@ -1,0 +1,9 @@
+$ C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe -m semview.estimate --corpus cipbench --path D:/SemView/thaw-2026-10-11/cipbench_root --old lexical:word --kprimes 500 --out D:\SemView\thaw-1017\results\runs\20261017-150338_estimate_cipbench_dense/estimate.json
+corpus=cipbench  N=2366  D=2378  old=lexical:word
+NOTE: no new-model forward passes are performed by this tool.
+prefixes  old: query='' passage=''
+  K'=500   observed reached=1.000 (savings 0.0%)  asymptote=1.000 (power_sat, rmse=0.0231)
+           stable after 5 intents (0% of log); accurate: within 0.02 after 5 intents (0% of log)
+wrote D:\SemView\thaw-1017\results\runs\20261017-150338_estimate_cipbench_dense\estimate.json (2,534 bytes, sha256 b2eae3dc0090)
+
+[exit 0 after 13 s]

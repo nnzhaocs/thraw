@@ -1,0 +1,29 @@
+# Postgres 17 + pgvector for step 1. Settings are for a 32-64 GB machine;
+# see README_STEP1.md section 2 for how to scale them.
+services:
+  thaw-pg:
+    image: pgvector/pgvector:0.8.1-pg17      # tested version; any 0.8.x works
+    container_name: thaw-pg
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: thaw
+    ports:
+      - "5432:5432"
+    shm_size: 8g          # parallel HNSW builds use shared memory; Docker's
+                          # 64 MB default fails with "could not resize shared memory"
+    volumes:
+      - thaw-pgdata:/var/lib/postgresql/data
+    command: >
+      postgres
+      -c shared_buffers=8GB
+      -c effective_cache_size=24GB
+      -c maintenance_work_mem=8GB
+      -c max_parallel_maintenance_workers=7
+      -c max_parallel_workers=8
+      -c max_worker_processes=16
+      -c work_mem=64MB
+      -c max_connections=200
+      -c checkpoint_timeout=30min
+      -c max_wal_size=16GB
+volumes:
+  thaw-pgdata:

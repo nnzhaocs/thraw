@@ -1,0 +1,32 @@
+$ python3 analysis/chain.py --synthetic --legs 4 --kprimes 500 --rho 0.4 --out /tmp/claude-0/sub/thaw/results/runs/20261015-223059_chain_synthetic_rho/chain.json
+
+  N=200,000  4 legs  k=10  rho target 40% per leg  150 evaluation queries (load x=0.375)
+    leg 1: 204 queries over 1 source(s) reached 80,122 (40.1%)
+    leg 2: 124 queries over 2 source(s) reached 80,045 (40.0%)
+    leg 3: 93 queries over 3 source(s) reached 80,374 (40.2%)
+    leg 4: 74 queries over 4 source(s) reached 80,372 (40.2%)
+
+  K'=500:  recall@k served, by leg
+  policy                 leg 1       leg 2       leg 3       leg 4
+  ----------------------------------------------------------------
+  original-only          0.817       0.676       0.571       0.449
+  previous-only              -       0.372       0.373       0.399
+  union-nearest              -       0.792       0.730       0.670
+  union-all                  -       0.792       0.790       0.775
+  passes, % of N          0.0%       45.6%       54.4%       60.6%   (union-all)
+
+  at the last leg, every row, cheapest first (the control: an `original-only` row that spends the same passes)
+  policy              K‘    passes   % of N   recall
+  --------------------------------------------------
+  previous-only      500    46,561    23.3%    0.399
+  original-only      500    62,523    31.3%    0.449
+  union-nearest      500    92,249    46.1%    0.670
+  union-all          500   121,179    60.6%    0.775
+
+  The literal design's best at this leg is 0.449, at any depth measured.
+  union-nearest at K'=500 reaches 0.670 for 46.1% of N.
+wrote /tmp/claude-0/sub/thaw/results/runs/20261015-223059_chain_synthetic_rho/chain.json (7,421 bytes, sha256 cc43ddb769e2)
+
+wrote /tmp/claude-0/sub/thaw/results/runs/20261015-223059_chain_synthetic_rho/chain.json
+
+[exit 0 after 12 s]

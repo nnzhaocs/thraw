@@ -1,0 +1,1 @@
+C:/Users/26240/AppData/Local/Programs/Python/Python311/python.exe analysis/operator_safety.py --old _local/opsafe_sample/minilm_3k.npy --new _local/opsafe_sample/bge_3k.npy --queries 500 --k 10 --label MiniLM -> bge-base (3k sample) --out D:\SemView\thaw-r18\results\runs\20261016-220554_opsafe_replace/operator_safety.json
